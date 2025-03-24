@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Design</title>
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Main Section -->
+<main class="contact-section">
+    <h1>WE WANT TO HEAR FROM YOU</h1>
+    <div class="contact-info">
+        <p><strong>Head Office</strong></p>
+        <p>4 West Silvermills Lane</p>
+        <p>Stockbridge</p>
+        <p>Edinburgh</p>
+        <p>EH15 5BD</p>
+        <p><strong>Email:</strong> info@locogen.com</p>
+        <p><strong>Telephone:</strong> +44 (0) 131 555 4745</p>
+    </div>
+    <form class="contact-form">
+        <!-- Name -->
+        <div class="form-group">
+            <label for="firstName">First Name*</label>
+            <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName">
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <!-- Company Details -->
+        <div class="form-group">
+            <label for="company">Company*</label>
+            <input type="text" id="company" name="company" required>
+        </div>
+
+        <!-- Country Dropdown with Search -->
+        <div class="form-group">
+            <label for="country">Country*</label>
+            <select id="country" name="country" required>
+                <option value="">Search or select a country...</option>
+                <option value="US">United States</option>
+                <option value="UK">United Kingdom</option>
+                <option value="CA">Canada</option>
+                <option value="AU">Australia</option>
+                <!-- Add more countries as needed -->
+            </select>
+        </div>
+
+        <!-- Solution Interest -->
+        <div class="form-group">
+            <label for="solution">What solution are you interested in?</label>
+            <select id="solution" name="solution" required>
+                <option value="">Please select one of the following:</option>
+                <option value="solution1">Solution 1</option>
+                <option value="solution2">Solution 2</option>
+                <option value="solution3">Solution 3</option>
+            </select>
+        </div>
+
+        <!-- Message -->
+        <div class="form-group">
+            <label for="message">Please provide all pertinent details about your enquiry:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <!-- Consent -->
+        <div class="form-group consent">
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent">You accept the Terms & Conditions by submitting your request.</label>
+        </div>
+        <div class="form-group consent">
+            <input type="checkbox" id="updates" name="updates">
+            <label for="updates">Yes, I want to receive updates and promotions.</label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Map Section -->
+    <div class="map-section">
+        <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2234.285715873926!2d-3.194322684059203!3d55.94789898060448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887c7907b8d5b9f%3A0x3c4e7a1b6f8f0b1e!2s4%20West%20Silvermills%20Ln%2C%20Edinburgh%20EH15%205BD%2C%20UK!5e0!3m2!1sen!2sus!4v1697130000000!5m2!1sen!2sus"
+                width="100%"
+                height="400"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+    </div>
+</main>
+
+
+
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script src="assets/js/loadcomponents.js"></script>
+<script src="assets/js/contact.js"></script>
+</body>
+</html>

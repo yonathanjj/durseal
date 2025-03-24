@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* Main Section */
+.contact-section {
+  width: 80%;
+  margin: 100px auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.contact-section h1 {
+  width: 100%;
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Contact Info */
+.contact-info {
+  flex: 1;
+  max-width: 300px;
+  background-color: #f4f4f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.contact-info strong {
+  color: #2c3e50;
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 2;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #2c3e50;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group.consent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-group.consent input {
+  width: auto;
+}
+
+/* Submit Button */
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #1a73e8; /* Mid-dark blue */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #1557b0; /* Darker blue on hover */
+}
+
+/* Map Section */
+.map-section {
+  width: 100%;
+  margin-top: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-section {
+    width: 90%;
+    margin: 80px auto;
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    max-width: 100%;
+  }
+
+  .contact-section h1 {
+    font-size: 28px;
+  }
+
+  .contact-info p {
+    font-size: 14px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 14px;
+  }
+
+  button[type="submit"] {
+    font-size: 16px;
+  }
+}
+
+
+
+

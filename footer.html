@@ -1,0 +1,244 @@
+<!-- Footer -->
+<footer class="footer">
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="assets/img/power.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <!-- Footer Content -->
+    <div class="footer-content">
+        <!-- Left Section (Contact Info and Copyright) -->
+        <div class="footer-left">
+            <h2>See how we can help you.</h2>
+            <p>Get in touch today.</p>
+            <p><strong>Email Us</strong></p>
+            <p>+44 (0) 1274 689400</p>
+            <div class="footer-copyright">
+                <p><strong>Site By Fishtank Agency</strong></p>
+                <p>© 2025 Think. All Rights Reserved.</p>
+            </div>
+        </div>
+
+        <!-- Vertical Line -->
+        <div class="vertical-line"></div>
+
+        <!-- Right Section (Links) -->
+        <div class="footer-right">
+            <div class="footer-grid">
+                <!-- Content Column -->
+                <div class="footer-column">
+                    <h3>CONTENT</h3>
+                    <ul>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Markets</a></li>
+                        <li><a href="#">Brands</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                    </ul>
+                </div>
+                <!-- Company Column -->
+                <div class="footer-column">
+                    <h3>COMPANY</h3>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">News</a></li>
+                    </ul>
+                </div>
+                <!-- Legal Column -->
+                <div class="footer-column">
+                    <h3>LEGAL</h3>
+                    <ul>
+                        <li><a href="#">T&Cs</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">Consent Preferences</a></li>
+                    </ul>
+                </div>
+                <!-- Connect Column -->
+                <div class="footer-column">
+                    <h3>CONNECT</h3>
+                    <ul>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    /* Footer Styles */
+  .footer {
+    position: relative;
+    color: white;
+    padding: 40px 0;
+    width: 100%;
+    overflow: hidden; /* Ensure video doesn't overflow */
+  }
+
+  /* Video Background */
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place video behind content */
+  }
+
+  .video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure video covers the entire footer */
+  }
+
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(44, 54, 145, 0.8); /* Dimmed overlay (use your brand color) */
+  }
+
+  /* Footer Content */
+  .footer-content {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    align-items: flex-start;
+    position: relative; /* Ensure content is above video */
+    z-index: 1;
+  }
+
+  /* Left Section (Contact Info and Copyright) */
+  .footer-left {
+    flex: 1;
+    max-width: 300px;
+    padding-right: 40px;
+  }
+
+  .footer-left h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .footer-left p {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+
+  .footer-left strong {
+    font-weight: 600;
+  }
+
+  .footer-copyright {
+    margin-top: 20px;
+  }
+
+  .footer-copyright p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 5px 0;
+  }
+
+  /* Vertical Line */
+  .vertical-line {
+    width: 1px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 40px;
+  }
+
+  /* Right Section (Links) */
+  .footer-right {
+    flex: 2;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .footer-column {
+    text-align: left;
+  }
+
+  .footer-column h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+
+  .footer-column ul li a:hover {
+    color: #ffcc00; /* Hover color */
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-content {
+      width: 90%;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .footer-left,
+    .footer-right {
+      max-width: 100%;
+      text-align: center;
+    }
+
+    .vertical-line {
+      display: none; /* Hide vertical line on mobile */
+    }
+
+    .footer-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+    }
+
+    .footer-left h2 {
+      font-size: 24px;
+    }
+
+    .footer-left p {
+      font-size: 16px;
+    }
+
+    .footer-column h3 {
+      font-size: 18px;
+    }
+
+    .footer-column ul li a {
+      font-size: 14px;
+    }
+
+    .footer-copyright p {
+      font-size: 14px;
+    }
+  }
+</style>

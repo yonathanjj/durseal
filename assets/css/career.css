@@ -1,0 +1,160 @@
+/* Careers Page Styles (Conflict-Free) */
+.careers-page {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f7;
+  color: #2c3691;
+}
+
+.careers-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+/* Careers Hero Section */
+.careers-hero {
+  text-align: center;
+  padding: 100px 0;
+  background: linear-gradient(135deg, #2c3691, #1a235f);
+  color: #fff;
+}
+
+.careers-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.careers-subtitle {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Job Listings Section */
+.careers-job-listings .careers-filters {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.careers-filter-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+}
+
+.careers-jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.careers-job-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.careers-job-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.careers-job-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.careers-job-location,
+.careers-job-type {
+  font-size: 1rem;
+  color: #666;
+}
+
+.careers-apply-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #ffcc00;
+  color: #2c3691;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.careers-apply-button:hover {
+  background: #e6b800;
+}
+
+/* Application Form Section */
+.careers-application-form {
+  background: #fff;
+  padding: 60px 0;
+}
+
+.careers-form-group {
+  margin-bottom: 20px;
+}
+
+.careers-form-label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.careers-form-input,
+.careers-form-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.careers-submit-button {
+  background: #2c3691;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.careers-submit-button:hover {
+  background: #1a235f;
+}
+
+/* Why Join Us Section */
+.careers-why-join-us .careers-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.careers-benefit-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.careers-benefit-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.careers-benefit-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.careers-benefit-description {
+  font-size: 1rem;
+  color: #666;
+}

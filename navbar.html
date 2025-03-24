@@ -1,0 +1,342 @@
+<nav class="navbar">
+  <div class="navbar-content">
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <img src="assets/img/logo.png" alt="Logo">
+    </a>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li class="dropdown">
+        <a href="#">Products/Solutions <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-menu">
+          <div class="dropdown-column">
+            <h4>Build</h4>
+            <a href="#">Concrete Admixtures</a>
+            <a href="#">Additives for Cement Industry</a>
+            <a href="#">Grouting</a>
+            <a href="#">Rigid Bonding</a>
+            <a href="#">Additives for Dry Mortar & Cypsum</a>
+            <a href="#">Offsite Construction</a>
+            <a href="#" class="more-link">More...</a>
+          </div>
+          <div class="dropdown-column">
+            <h4>Protect</h4>
+            <a href="#">Firestop Systems</a>
+            <a href="#">Roof Systems</a>
+            <a href="#">Building Envelope Systems</a>
+            <a href="#">Waterproofing Systems</a>
+            <a href="#">Concrete Protection</a>
+            <a href="#" class="more-link">More...</a>
+          </div>
+          <div class="dropdown-column">
+            <h4>Build</h4>
+            <a href="#">Concrete Admixtures</a>
+            <a href="#">Additives for Cement Industry</a>
+            <a href="#">Grouting</a>
+            <a href="#">Rigid Bonding</a>
+            <a href="#">Additives for Dry Mortar & Cypsum</a>
+            <a href="#">Offsite Construction</a>
+            <a href="#" class="more-link">More...</a>
+          </div>
+          <div class="dropdown-column">
+            <h4>Protect</h4>
+            <a href="#">Firestop Systems</a>
+            <a href="#">Roof Systems</a>
+            <a href="#">Building Envelope Systems</a>
+            <a href="#">Waterproofing Systems</a>
+            <a href="#">Concrete Protection</a>
+            <a href="#" class="more-link">More...</a>
+          </div>
+          <!-- Repeat for other columns (Finish, Repair, Solutions for Projects) -->
+        </div>
+      </li>
+      <li><a href="projects.html">Reference Projects</a></li>
+      <li><a href="career.html">Carrier</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+
+    <!-- Hamburger Menu (Mobile) -->
+    <div class="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+</nav>
+
+<style>
+  /* General Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+  /* Navbar */
+.navbar {
+  background-color: #2c3e50; /* Greyish color */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  transition: top 0.3s;
+  height: 80px; /* Increased height */
+  display: flex;
+  align-items: center;
+}
+
+.navbar-content {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo img {
+  height: 50px; /* Adjust as needed */
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffcc00; /* Hover color */
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #34495e;
+  width: 1000px; /* Adjust as needed */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dropdown-column {
+  flex: 1;
+  min-width: 180px;
+  margin: 10px;
+}
+
+.dropdown-column h4 {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.dropdown-column a {
+  color: white;
+  display: block;
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+
+.dropdown-column a:hover {
+  color: #ffcc00;
+}
+
+.more-link {
+  font-weight: 600;
+  color: #ffcc00 !important;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #34495e;
+  border-radius: 25px;
+  padding: 5px 10px;
+}
+
+.search-bar input {
+  padding: 8px;
+  border: none;
+  background: transparent;
+  color: white;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  color: #ffcc00;
+}
+
+/* Hamburger Menu (Mobile) */
+.hamburger {
+  display: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #2c3e50;
+    padding: 0 20px; /* Added padding for mobile mode */
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 10px 0; /* Added padding between links */
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .search-bar {
+    display: none;
+  }
+
+  .dropdown-menu {
+    display: none; /* Hide by default */
+    position: static;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #2c3e50;
+  }
+
+  .dropdown-menu.active {
+    display: flex; /* Show when active */
+    flex-direction: column;
+  }
+
+  .dropdown-column {
+    margin: 10px 0;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+</style>
+<script>
+  // Hamburger Menu Toggle
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+// Dropdown Toggle for Mobile
+const dropdownToggle = document.querySelector('.dropdown > a');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+
+dropdownToggle.addEventListener('click', (e) => {
+  if (window.innerWidth <= 768) { // Only for mobile mode
+    e.preventDefault(); // Prevent default link behavior
+    dropdownMenu.classList.toggle('active');
+  }
+});
+
+// Close Dropdown When Clicking Outside
+document.addEventListener('click', (e) => {
+  if (window.innerWidth <= 768 && !e.target.closest('.dropdown')) {
+    dropdownMenu.classList.remove('active');
+  }
+});
+
+// Navbar Hide/Show on Scroll
+let lastScroll = 0;
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll <= 0) {
+    navbar.style.top = '0';
+    return;
+  }
+
+  if (currentScroll > lastScroll) {
+    // Scrolling down
+    navbar.style.top = '-80px';
+  } else {
+    // Scrolling up
+    navbar.style.top = '0';
+  }
+
+  lastScroll = currentScroll;
+});
+
+// Search Bar Functionality
+const searchBar = document.querySelector('.search-bar input');
+const searchButton = document.querySelector('.search-bar button');
+
+searchButton.addEventListener('click', () => {
+  const query = searchBar.value.trim();
+  if (query) {
+    alert(`Searching for: ${query}`);
+    // Add your search functionality here
+  }
+});
+
+// GSAP Animations
+gsap.from('.navbar', { duration: 1, y: -100, opacity: 0, ease: 'power2.out' });
+gsap.from('.nav-links li', { duration: 0.5, x: -50, opacity: 0, stagger: 0.2, delay: 0.5 });
+gsap.from('.search-bar', { duration: 0.5, x: 50, opacity: 0, delay: 1 });
+</script>
