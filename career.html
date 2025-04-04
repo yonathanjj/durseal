@@ -3,50 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navbar Design</title>
-  <link rel="stylesheet" href="assets/css/career.css">
+  <title>Careers | Join Our Team</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/career.css">
 </head>
 <body>
-
 
 <div class="careers-page">
   <!-- Careers Hero Section -->
   <section class="careers-hero">
     <div class="careers-container">
-      <h1 class="careers-title">Join Our Team</h1>
-      <p class="careers-subtitle">We’re looking for passionate individuals to join us in building the future. Explore our open positions and become a part of something great.</p>
-    </div>
+      <h1 class="careers-title">Build Your Future With Us</h1>
+      <p class="careers-subtitle">We're looking for innovative thinkers and problem solvers to join our growing team</p>
   </section>
 
   <!-- Job Listings Section -->
-  <section class="careers-job-listings">
+  <section class="careers-job-listings" id="positions">
     <div class="careers-container">
-      <h2 class="careers-section-title">Open Positions</h2>
+      <h2 class="careers-section-title">Current Opportunities</h2>
+      <p class="careers-section-subtitle">Find the perfect role for your skills and ambitions</p>
+
       <div class="careers-filters">
-        <label class="careers-filter-label"><input type="checkbox" name="filter" value="full-time"> Full-Time</label>
-        <label class="careers-filter-label"><input type="checkbox" name="filter" value="part-time"> Part-Time</label>
-        <label class="careers-filter-label"><input type="checkbox" name="filter" value="remote"> Remote</label>
+        <div class="careers-filter-group">
+          <h4>Filter by:</h4>
+          <div class="careers-filter-options">
+            <button class="careers-filter-btn active" data-filter="all">All</button>
+            <button class="careers-filter-btn" data-filter="full-time">Full-Time</button>
+            <button class="careers-filter-btn" data-filter="part-time">Part-Time</button>
+            <button class="careers-filter-btn" data-filter="remote">Remote</button>
+            <button class="careers-filter-btn" data-filter="hybrid">Hybrid</button>
+          </div>
+        </div>
       </div>
+
       <div class="careers-jobs-grid">
-        <div class="careers-job-card" data-type="full-time">
+        <!-- Job Card 1 -->
+        <div class="careers-job-card" data-type="full-time hybrid">
+          <div class="job-card-header">
+            <span class="job-badge full-time">Full-Time</span>
+            <span class="job-badge hybrid">Hybrid</span>
+          </div>
           <h3 class="careers-job-title">Sales Executive</h3>
-          <p class="careers-job-location">Location: New York</p>
-          <p class="careers-job-type">Type: Full-Time</p>
-          <a href="#apply" class="careers-apply-button">Apply Now</a>
+          <div class="job-meta">
+            <span><i class="fas fa-map-marker-alt"></i> New York, NY</span>
+            <span><i class="fas fa-briefcase"></i> Business Development</span>
+          </div>
+          <p class="job-description">Drive revenue growth by developing new client relationships and managing key accounts in the tech sector.</p>
+          <div class="job-card-footer">
+            <a href="#apply" class="careers-apply-button">Apply Now <i class="fas fa-arrow-right"></i></a>
+            <span class="job-posted">Posted 2 days ago</span>
+          </div>
         </div>
-        <div class="careers-job-card" data-type="remote">
-          <h3 class="careers-job-title">Software Engineer</h3>
-          <p class="careers-job-location">Location: Remote</p>
-          <p class="careers-job-type">Type: Remote</p>
-          <a href="#apply" class="careers-apply-button">Apply Now</a>
+
+        <!-- Job Card 2 -->
+        <div class="careers-job-card" data-type="remote full-time">
+          <div class="job-card-header">
+            <span class="job-badge remote">Remote</span>
+            <span class="job-badge full-time">Full-Time</span>
+          </div>
+          <h3 class="careers-job-title">Senior Software Engineer</h3>
+          <div class="job-meta">
+            <span><i class="fas fa-map-marker-alt"></i> Remote</span>
+            <span><i class="fas fa-briefcase"></i> Engineering</span>
+          </div>
+          <p class="job-description">Design and implement scalable solutions for our cloud-based platform using modern JavaScript frameworks.</p>
+          <div class="job-card-footer">
+            <a href="#apply" class="careers-apply-button">Apply Now <i class="fas fa-arrow-right"></i></a>
+            <span class="job-posted">Posted 1 week ago</span>
+          </div>
         </div>
+
+        <!-- Job Card 3 -->
         <div class="careers-job-card" data-type="part-time">
+          <div class="job-card-header">
+            <span class="job-badge part-time">Part-Time</span>
+          </div>
           <h3 class="careers-job-title">Marketing Intern</h3>
-          <p class="careers-job-location">Location: San Francisco</p>
-          <p class="careers-job-type">Type: Part-Time</p>
-          <a href="#apply" class="careers-apply-button">Apply Now</a>
+          <div class="job-meta">
+            <span><i class="fas fa-map-marker-alt"></i> San Francisco, CA</span>
+            <span><i class="fas fa-briefcase"></i> Marketing</span>
+          </div>
+          <p class="job-description">Support our marketing team with content creation, social media management, and campaign analysis.</p>
+          <div class="job-card-footer">
+            <a href="#apply" class="careers-apply-button">Apply Now <i class="fas fa-arrow-right"></i></a>
+            <span class="job-posted">Posted 3 days ago</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="careers-no-jobs">
+        <p>Don't see your perfect role? <a href="#contact">Send us your resume</a> anyway!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Join Us Section -->
+  <section class="careers-why-join-us" id="why-join">
+    <div class="careers-container">
+      <h2 class="careers-section-title">Why You'll Love Working Here</h2>
+      <p class="careers-section-subtitle">We're committed to creating an environment where you can thrive</p>
+
+      <div class="careers-benefits-grid">
+        <!-- Benefit 1 -->
+        <div class="careers-benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="careers-benefit-title">Growth Opportunities</h3>
+          <p class="careers-benefit-description">We invest in your development with training programs, mentorship, and clear career paths.</p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="careers-benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-balance-scale"></i>
+          </div>
+          <h3 class="careers-benefit-title">Work-Life Balance</h3>
+          <p class="careers-benefit-description">Flexible schedules and unlimited PTO help you maintain a healthy balance.</p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="careers-benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h3 class="careers-benefit-title">Comprehensive Benefits</h3>
+          <p class="careers-benefit-description">Health, dental, vision, and retirement plans to support your wellbeing.</p>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="careers-benefit-card">
+          <div class="benefit-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3 class="careers-benefit-title">Inclusive Culture</h3>
+          <p class="careers-benefit-description">We celebrate diversity and foster an environment where everyone belongs.</p>
         </div>
       </div>
     </div>
@@ -55,62 +147,71 @@
   <!-- Application Form Section -->
   <section class="careers-application-form" id="apply">
     <div class="careers-container">
-      <h2 class="careers-section-title">Apply Now</h2>
-      <form class="careers-form">
-        <div class="careers-form-group">
-          <label for="name" class="careers-form-label">Full Name</label>
-          <input type="text" id="name" name="name" class="careers-form-input" required>
-        </div>
-        <div class="careers-form-group">
-          <label for="email" class="careers-form-label">Email Address</label>
-          <input type="email" id="email" name="email" class="careers-form-input" required>
-        </div>
-        <div class="careers-form-group">
-          <label for="phone" class="careers-form-label">Phone Number</label>
-          <input type="tel" id="phone" name="phone" class="careers-form-input" required>
-        </div>
-        <div class="careers-form-group">
-          <label for="resume" class="careers-form-label">Upload Resume</label>
-          <input type="file" id="resume" name="resume" class="careers-form-input" accept=".pdf,.doc,.docx" required>
-        </div>
-        <div class="careers-form-group">
-          <label for="message" class="careers-form-label">Cover Letter</label>
-          <textarea id="message" name="message" class="careers-form-textarea" rows="5" required></textarea>
-        </div>
-        <button type="submit" class="careers-submit-button">Submit Application</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Why Join Us Section -->
-  <section class="careers-why-join-us">
-    <div class="careers-container">
-      <h2 class="careers-section-title">Why Join Us?</h2>
-      <div class="careers-benefits-grid">
-        <div class="careers-benefit-card">
-          <h3 class="careers-benefit-title">Competitive Salary</h3>
-          <p class="careers-benefit-description">We offer salaries that match your skills and experience.</p>
-        </div>
-        <div class="careers-benefit-card">
-          <h3 class="careers-benefit-title">Flexible Work Hours</h3>
-          <p class="careers-benefit-description">Work when you’re most productive, whether it’s day or night.</p>
-        </div>
-        <div class="careers-benefit-card">
-          <h3 class="careers-benefit-title">Career Growth</h3>
-          <p class="careers-benefit-description">We invest in your development with training and mentorship.</p>
-        </div>
-        <div class="careers-benefit-card">
-          <h3 class="careers-benefit-title">Inclusive Culture</h3>
-          <p class="careers-benefit-description">Join a diverse and supportive team that values your voice.</p>
-        </div>
+      <div class="form-header">
+        <h2 class="careers-section-title">Ready to Apply?</h2>
+        <p class="careers-section-subtitle">Start your journey with us today</p>
       </div>
+
+      <form class="careers-form">
+        <div class="form-columns">
+          <div class="form-col">
+            <div class="careers-form-group">
+              <label for="name" class="careers-form-label">Full Name*</label>
+              <input type="text" id="name" name="name" class="careers-form-input" required>
+            </div>
+            <div class="careers-form-group">
+              <label for="email" class="careers-form-label">Email Address*</label>
+              <input type="email" id="email" name="email" class="careers-form-input" required>
+            </div>
+            <div class="careers-form-group">
+              <label for="phone" class="careers-form-label">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="careers-form-input">
+            </div>
+          </div>
+
+          <div class="form-col">
+            <div class="careers-form-group">
+              <label for="position" class="careers-form-label">Position Applying For*</label>
+              <select id="position" name="position" class="careers-form-input" required>
+                <option value="">Select a position</option>
+                <option value="sales-executive">Sales Executive</option>
+                <option value="software-engineer">Software Engineer</option>
+                <option value="marketing-intern">Marketing Intern</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="careers-form-group">
+              <label for="resume" class="careers-form-label">Upload Resume/CV*</label>
+              <div class="file-upload">
+                <input type="file" id="resume" name="resume" class="careers-form-input" accept=".pdf,.doc,.docx" required>
+                <label for="resume" class="file-upload-label">Choose File</label>
+                <span class="file-name">No file chosen</span>
+              </div>
+            </div>
+            <div class="careers-form-group">
+              <label for="linkedin" class="careers-form-label">LinkedIn Profile</label>
+              <input type="url" id="linkedin" name="linkedin" class="careers-form-input" placeholder="https://linkedin.com/in/yourprofile">
+            </div>
+          </div>
+        </div>
+
+        <div class="careers-form-group full-width">
+          <label for="message" class="careers-form-label">Cover Letter</label>
+          <textarea id="message" name="message" class="careers-form-textarea" rows="6" placeholder="Tell us why you'd be a great fit..."></textarea>
+        </div>
+
+        <div class="form-footer">
+          <button type="submit" class="careers-submit-button">
+            Submit Application <i class="fas fa-paper-plane"></i>
+          </button>
+          <p class="form-disclaimer">We'll get back to you within 5 business days</p>
+        </div>
+      </form>
     </div>
   </section>
 </div>
 
-<!-- Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-<script src="assets/js/loadcomponents.js"></script>
 <script src="assets/js/career.js"></script>
+<script src="assets/js/loadcomponents.js"></script>
 </body>
 </html>

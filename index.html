@@ -3,196 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar Design</title>
+    <title>Duraseal - Innovative Building Solutions</title>
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- Hero Section -->
+<!-- Enhanced Hero Section -->
 <section class="home-hero">
-    <div class="home-container">
-        <!-- Sliding Image Gallery -->
-        <div class="home-slider">
-            <div class="home-slides">
-                <div class="home-slide active" style="background-image: url('assets/img/3932.jpg');"></div>
-                <div class="home-slide" style="background-image: url('assets/img/3932.jpg');"></div>
-                <div class="home-slide" style="background-image: url('assets/img/3932.jpg');"></div>
-            </div>
-            <div class="home-dots">
-                <span class="home-dot active"></span>
-                <span class="home-dot"></span>
-                <span class="home-dot"></span>
+    <div class="hero-slides">
+        <div class="hero-slide active" style="background-image: url('assets/img/3932.jpg');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="home-hero-title">Building the Future with Duraseal</h1>
+                <p class="home-hero-subtitle">Innovative solutions for a better tomorrow.</p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="home-hero-cta primary">Contact Us</a>
+                    <a href="#products" class="home-hero-cta secondary">Our Products</a>
+                </div>
             </div>
         </div>
-        <!-- Hero Text and CTA -->
-        <div class="home-hero-content">
-            <h1 class="home-hero-title">Building the Future with Duraseal</h1>
-            <p class="home-hero-subtitle">Innovative solutions for a better tomorrow.</p>
-            <a href="contact.html" class="home-hero-cta">Contact Us</a>
+        <div class="hero-slide" style="background-image: url('assets/img/11.jpg');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="home-hero-title">Quality Construction Solutions</h1>
+                <p class="home-hero-subtitle">Advanced materials for modern challenges.</p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="home-hero-cta primary">Contact Us</a>
+                    <a href="#products" class="home-hero-cta secondary">Our Products</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slide" style="background-image: url('assets/img/3932.jpg');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="home-hero-title">Sustainable Building Materials</h1>
+                <p class="home-hero-subtitle">Eco-friendly solutions for a greener future.</p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="home-hero-cta primary">Contact Us</a>
+                    <a href="#products" class="home-hero-cta secondary">Our Products</a>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="hero-scroll-indicator">
+        <span>Scroll Down</span>
+        <i class="fas fa-chevron-down"></i>
+    </div>
 </section>
-
 
 <!-- Who We Are Section -->
 <section class="who-we-are">
     <div class="who-we-are-container">
-        <!-- Text Content -->
         <div class="who-we-are-content">
             <h2 class="who-we-are-title">Who We Are</h2>
             <p class="who-we-are-description">
                 At Better Buildings, we are committed to creating innovative solutions that bring performance and sustainability benefits to remarkable buildings in multiple sectors all around the world. Our mission is to lead the way in sustainable construction and design, ensuring a better future for generations to come.
             </p>
-            <a href="#" class="who-we-are-cta">Explore Case Studies</a>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="15">0</span>+
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="250">0</span>+
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+            </div>
+            <a href="#" class="who-we-are-cta">Explore</a>
         </div>
-
-        <!-- Image on the Right -->
         <div class="who-we-are-image">
             <img src="assets/img/3932.jpg" alt="Who We Are">
         </div>
     </div>
 </section>
 
-
-<section class="products-section">
+<!-- Products Section -->
+<section class="products-section" id="products">
     <div class="container">
         <h2>Our Products</h2>
-        <p class="section-description">Explore our innovative range of products designed to meet your needs.</p>
+        <p class="section-description">Explore our innovative range of products with detailed specifications and catalogs.</p>
+
+        <div class="products-filter">
+            <button class="filter-btn active" data-filter="all">All Products</button>
+            <button class="filter-btn" data-filter="category1">Category 1</button>
+            <button class="filter-btn" data-filter="category2">Category 2</button>
+            <button class="filter-btn" data-filter="category3">Category 3</button>
+        </div>
+
         <div class="products-grid">
-            <!-- Product Cards -->
-            <div class="product-card">
+            <!-- Product 1 -->
+            <div class="product-card" data-category="category1">
                 <div class="product-image">
-                    <img src="assets/img/3932.jpg" alt="Product Image">
+                    <img src="assets/img/2.jpeg" alt="Product 1">
                 </div>
                 <div class="product-content">
                     <h3>Product Title 1</h3>
-                    <button class="explore-button">Explore Products</button>
+                    <p>Short description of the product and its key features.</p>
+                    <div class="product-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="assets/pdf/catalog1.pdf" class="download-btn" download>
+                            <i class="fas fa-download"></i> Catalog
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="product-card">
+
+            <!-- Product 2 -->
+            <div class="product-card" data-category="category2">
                 <div class="product-image">
-                    <img src="assets/img/3932.jpg" alt="Product Image">
+                    <img src="assets/img/3.jpeg" alt="Product 2">
                 </div>
                 <div class="product-content">
                     <h3>Product Title 2</h3>
-                    <button class="explore-button">Explore Products</button>
+                    <p>Short description of the product and its key features.</p>
+                    <div class="product-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="assets/pdf/catalog2.pdf" class="download-btn" download>
+                            <i class="fas fa-download"></i> Catalog
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="product-card">
+
+            <div class="product-card" data-category="category1">
                 <div class="product-image">
-                    <img src="assets/img/3932.jpg" alt="Product Image">
+                    <img src="assets/img/1.jpeg" alt="Product 1">
                 </div>
                 <div class="product-content">
-                    <h3>Product Title 3</h3>
-                    <button class="explore-button">Explore Products</button>
+                    <h3>Product Title 1</h3>
+                    <p>Short description of the product and its key features.</p>
+                    <div class="product-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="assets/pdf/catalog1.pdf" class="download-btn" download>
+                            <i class="fas fa-download"></i> Catalog
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="product-card">
+
+            <!-- Product 2 -->
+            <div class="product-card" data-category="category2">
                 <div class="product-image">
-                    <img src="assets/img/3932.jpg" alt="Product Image">
+                    <img src="assets/img/5.jpeg" alt="Product 2">
                 </div>
                 <div class="product-content">
-                    <h3>Product Title 4</h3>
-                    <button class="explore-button">Explore Products</button>
+                    <h3>Product Title 2</h3>
+                    <p>Short description of the product and its key features.</p>
+                    <div class="product-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="assets/pdf/catalog2.pdf" class="download-btn" download>
+                            <i class="fas fa-download"></i> Catalog
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="assets/img/3932.jpg" alt="Product Image">
-                </div>
-                <div class="product-content">
-                    <h3>Product Title 5</h3>
-                    <button class="explore-button">Explore Products</button>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="assets/img/3932.jpg" alt="Product Image">
-                </div>
-                <div class="product-content">
-                    <h3>Product Title 6</h3>
-                    <button class="explore-button">Explore Products</button>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="assets/img/3932.jpg" alt="Product Image">
-                </div>
-                <div class="product-content">
-                    <h3>Product Title 7</h3>
-                    <button class="explore-button">Explore Products</button>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="assets/img/3932.jpg" alt="Product Image">
-                </div>
-                <div class="product-content">
-                    <h3>Product Title 8</h3>
-                    <button class="explore-button">Explore Products</button>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="assets/img/3932.jpg" alt="Product Image">
-                </div>
-                <div class="product-content">
-                    <h3>Product Title 9</h3>
-                    <button class="explore-button">Explore Products</button>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="assets/img/3932.jpg" alt="Product Image">
-                </div>
-                <div class="product-content">
-                    <h3>Product Title 10</h3>
-                    <button class="explore-button">Explore Products</button>
-                </div>
-            </div>
+        </div>
+
+        <div class="view-all-container">
+            <a href="products.html" class="view-all-btn">View All Products</a>
         </div>
     </div>
 </section>
 
-
+<!-- Projects Section -->
 <section class="projects-section">
     <div class="container">
-        <h2>Reference  Projects</h2>
-        <p class="section-description">Explore some of our most innovative and impactful projects.</p>
-        <div class="masonry-grid">
-            <!-- Project Cards -->
+        <div class="section-header">
+            <h2>Reference Projects</h2>
+            <p class="section-description">Explore some of our most innovative and impactful projects.</p>
+            <a href="projects.html" class="view-all-link">View All Projects <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Project 1 -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="assets/img/3932.jpg" alt="Project Image 1">
-                    <div class="project-overlay"></div>
-                    <div class="project-content">
-                        <h3>Project Title 1</h3>
-                        <p>This is a short description of the project.</p>
-                        <button class="explore-button">Explore Project</button>
+                    <img src="assets/img/4.jpeg" alt="Project 1">
+                    <div class="project-overlay">
+                        <div class="project-content">
+                            <h3>Project Title 1</h3>
+                            <p>Short description of the project and its significance.</p>
+                            <a href="project-detail.html" class="explore-btn">Explore Project</a>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Project 2 -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="assets/img/3932.jpg" alt="Project Image 2">
-                    <div class="project-overlay"></div>
-                    <div class="project-content">
-                        <h3>Project Title 2</h3>
-                        <p>This is a short description of the project.</p>
-                        <button class="explore-button">Explore Project</button>
+                    <img src="assets/img/8.jpeg" alt="Project 2">
+                    <div class="project-overlay">
+                        <div class="project-content">
+                            <h3>Project Title 2</h3>
+                            <p>Short description of the project and its significance.</p>
+                            <a href="project-detail.html" class="explore-btn">Explore Project</a>
+                        </div>
                     </div>
                 </div>
             </div>
+
             <div class="project-card">
                 <div class="project-image">
-                    <img src="assets/img/3932.jpg" alt="Project Image 3">
-                    <div class="project-overlay"></div>
-                    <div class="project-content">
-                        <h3>Project Title 3</h3>
-                        <p>This is a short description of the project.</p>
-                        <button class="explore-button">Explore Project</button>
+                    <img src="assets/img/1.jpeg" alt="Project 1">
+                    <div class="project-overlay">
+                        <div class="project-content">
+                            <h3>Project Title 1</h3>
+                            <p>Short description of the project and its significance.</p>
+                            <a href="project-detail.html" class="explore-btn">Explore Project</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -200,95 +221,102 @@
     </div>
 </section>
 
-
+<!-- Blog Section -->
 <section class="blog-section">
     <div class="container">
-        <h2>Discover More</h2>
-        <div class="blog-slider">
-            <div class="blog-cards">
+        <h2>Latest Insights</h2>
+        <p class="section-description">Discover articles and news about our industry and innovations.</p>
+
+        <div class="blog-slider-container">
+            <div class="blog-slider">
+                <!-- Blog Post 1 -->
                 <div class="blog-card">
                     <div class="blog-image">
-                        <img src="assets/img/3932.jpg" alt="Blog Image">
-                        <div class="blog-overlay"></div>
-                        <div class="blog-content">
-                            <h3>Blog Title 1</h3>
-                            <p>This is a short description of the blog post.</p>
+                        <img src="assets/img/8.jpeg" alt="Blog Post 1">
+                        <div class="blog-category">Industry News</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Blog Post Title 1</h3>
+                        <p class="blog-excerpt">Short excerpt from the blog post to entice readers...</p>
+                        <div class="blog-meta">
+                            <span class="read-time">5 min read</span>
+                            <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <div class="read-time">5 min read</div>
                 </div>
+
+                <!-- Blog Post 2 -->
                 <div class="blog-card">
                     <div class="blog-image">
-                        <img src="https://via.placeholder.com/300x500" alt="Blog Image">
-                        <div class="blog-overlay"></div>
-                        <div class="blog-content">
-                            <h3>Blog Title 2</h3>
-                            <p>This is a short description of the blog post.</p>
+                        <img src="assets/img/11.jpg" alt="Blog Post 2">
+                        <div class="blog-category">Innovation</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Blog Post Title 2</h3>
+                        <p class="blog-excerpt">Short excerpt from the blog post to entice readers...</p>
+                        <div class="blog-meta">
+                            <span class="read-time">7 min read</span>
+                            <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <div class="read-time">7 min read</div>
                 </div>
+
+                <!-- Blog Post 1 -->
                 <div class="blog-card">
                     <div class="blog-image">
-                        <img src="https://via.placeholder.com/300x500" alt="Blog Image">
-                        <div class="blog-overlay"></div>
-                        <div class="blog-content">
-                            <h3>Blog Title 3</h3>
-                            <p>This is a short description of the blog post.</p>
+                        <img src="assets/img/10.jpg" alt="Blog Post 1">
+                        <div class="blog-category">Industry News</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Blog Post Title 1</h3>
+                        <p class="blog-excerpt">Short excerpt from the blog post to entice readers...</p>
+                        <div class="blog-meta">
+                            <span class="read-time">5 min read</span>
+                            <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <div class="read-time">4 min read</div>
                 </div>
+
+                <!-- Blog Post 2 -->
                 <div class="blog-card">
                     <div class="blog-image">
-                        <img src="https://via.placeholder.com/300x500" alt="Blog Image">
-                        <div class="blog-overlay"></div>
-                        <div class="blog-content">
-                            <h3>Blog Title 4</h3>
-                            <p>This is a short description of the blog post.</p>
+                        <img src="assets/img/2.jpeg" alt="Blog Post 2">
+                        <div class="blog-category">Innovation</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>Blog Post Title 2</h3>
+                        <p class="blog-excerpt">Short excerpt from the blog post to entice readers...</p>
+                        <div class="blog-meta">
+                            <span class="read-time">7 min read</span>
+                            <a href="blog-post.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
-                    <div class="read-time">6 min read</div>
-                </div>
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://via.placeholder.com/300x500" alt="Blog Image">
-                        <div class="blog-overlay"></div>
-                        <div class="blog-content">
-                            <h3>Blog Title 5</h3>
-                            <p>This is a short description of the blog post.</p>
-                        </div>
-                    </div>
-                    <div class="read-time">8 min read</div>
-                </div>
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <img src="assets/img/3932.jpg" alt="Blog Image">
-                        <div class="blog-overlay"></div>
-                        <div class="blog-content">
-                            <h3>Blog Title 6</h3>
-                            <p>This is a short description of the blog post.</p>
-                        </div>
-                    </div>
-                    <div class="read-time">9 min read</div>
-                </div>
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <img src="assets/img/3932.jpg" alt="Blog Image">
-                        <div class="blog-overlay"></div>
-                        <div class="blog-content">
-                            <h3>Blog Title 7</h3>
-                            <p>This is a short description of the blog post.</p>
-                        </div>
-                    </div>
-                    <div class="read-time">9 min read</div>
                 </div>
             </div>
-            <div class="slider-controls">
-                <button class="slider-button left">&larr;</button>
-                <div class="slider-track"></div>
-                <button class="slider-button right">&rarr;</button>
+
+            <div class="slider-nav">
+                <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots"></div>
+                <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
             </div>
+        </div>
+
+        <div class="view-all-container">
+            <a href="blog.html" class="view-all-btn">View All Articles</a>
+        </div>
+    </div>
+</section>
+
+<!-- New CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Ready to Find the Right Solution for Your Project?</h2>
+        <p>Our team of experts is ready to help you select the perfect products for your construction needs.</p>
+        <div class="cta-buttons">
+            <a href="contact.html" class="cta-button primary">Contact Our Team</a>
+            <a href="tel:+1234567890" class="cta-button secondary">
+                <i class="fas fa-phone"></i> Call Now
+            </a>
         </div>
     </div>
 </section>

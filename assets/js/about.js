@@ -1,142 +1,172 @@
-// GSAP Animations for Hero Section
-gsap.from('.hero-content h1', {
-  duration: 1,
-  y: -50,
-  opacity: 0,
-  ease: 'power2.out',
-  delay: 0.5,
-});
+document.addEventListener("DOMContentLoaded", function() {
+  // Register ScrollTrigger plugin
+  gsap.registerPlugin(ScrollTrigger);
 
-gsap.from('.hero-content p', {
-  duration: 1,
-  y: -50,
-  opacity: 0,
-  ease: 'power2.out',
-  delay: 1,
-});
+  // Hero Section Animations
+  gsap.from(".hero-content h1", {
+    duration: 1,
+    y: -50,
+    opacity: 0,
+    ease: "power2.out",
+    delay: 0.5
+  });
 
-gsap.from('.cta-button', {
-  duration: 1,
-  y: -50,
-  opacity: 0,
-  ease: 'power2.out',
-  delay: 1.5,
-});
+  gsap.from(".hero-content p", {
+    duration: 1,
+    y: -50,
+    opacity: 0,
+    ease: "power2.out",
+    delay: 1
+  });
 
-// GSAP Animations for Our Story Section
-gsap.from('.story-content h2', {
-  duration: 1,
-  y: -50,
-  opacity: 0,
-  ease: 'power2.out',
-  scrollTrigger: {
-    trigger: '.our-story-section',
-    start: 'top 80%',
-  },
-});
+  gsap.from(".cta-button", {
+    duration: 1,
+    y: -50,
+    opacity: 0,
+    ease: "power2.out",
+    delay: 1.5
+  });
 
-gsap.from('.story-content p', {
-  duration: 1,
-  y: -50,
-  opacity: 0,
-  ease: 'power2.out',
-  scrollTrigger: {
-    trigger: '.our-story-section',
-    start: 'top 80%',
-  },
-});
+  // Story Section Animations
+  gsap.from(".story-content h2", {
+    scrollTrigger: {
+      trigger: ".story-content",
+      start: "top 80%",
+      toggleActions: "play none none none"
+    },
+    duration: 1,
+    y: -30,
+    opacity: 0,
+    ease: "power2.out"
+  });
 
-gsap.from('.mission h3', {
-  duration: 1,
-  y: -50,
-  opacity: 0,
-  ease: 'power2.out',
-  scrollTrigger: {
-    trigger: '.mission',
-    start: 'top 80%',
-  },
-});
+  gsap.from(".story-content p", {
+    scrollTrigger: {
+      trigger: ".story-content",
+      start: "top 70%",
+      toggleActions: "play none none none"
+    },
+    duration: 1,
+    y: 30,
+    opacity: 0,
+    stagger: 0.2,
+    ease: "power1.out"
+  });
 
-gsap.from('.mission p', {
-  duration: 1,
-  y: -50,
-  opacity: 0,
-  ease: 'power2.out',
-  scrollTrigger: {
-    trigger: '.mission',
-    start: 'top 80%',
-  },
-});
+  // Mission Section Animations
+  gsap.from(".mission h3", {
+    scrollTrigger: {
+      trigger: ".mission",
+      start: "top 80%",
+      toggleActions: "play none none none"
+    },
+    duration: 1,
+    y: -30,
+    opacity: 0,
+    ease: "back.out"
+  });
 
-gsap.from('.value-card', {
-  duration: 0.5,
-  y: 50,
-  opacity: 0,
-  stagger: 0.2,
-  scrollTrigger: {
-    trigger: '.values',
-    start: 'top 80%',
-  },
-});
+  gsap.from(".mission p", {
+    scrollTrigger: {
+      trigger: ".mission",
+      start: "top 70%",
+      toggleActions: "play none none none"
+    },
+    duration: 1,
+    y: 30,
+    opacity: 0,
+    stagger: 0.2,
+    ease: "power1.out"
+  });
 
+  // Values Cards Animation
+  gsap.from(".value-card", {
+    scrollTrigger: {
+      trigger: ".values",
+      start: "top 80%",
+      toggleActions: "play none none none"
+    },
+    duration: 0.8,
+    y: 50,
+    opacity: 0,
+    stagger: 0.15,
+    ease: "back.out"
+  });
 
+  // What We Do Section Animation
+  gsap.from(".what-we-do .text-block", {
+    scrollTrigger: {
+      trigger: ".what-we-do",
+      start: "top 80%",
+      toggleActions: "play none none none"
+    },
+    duration: 1,
+    y: 50,
+    opacity: 0,
+    stagger: 0.2,
+    ease: "power2.out"
+  });
 
+  // Partners Section Animations
+  gsap.from(".partners-clients h2", {
+    scrollTrigger: {
+      trigger: ".partners-clients",
+      start: "top 80%",
+      toggleActions: "play none none none"
+    },
+    duration: 0.8,
+    scale: 0.8,
+    opacity: 0,
+    ease: "power2.out"
+  });
 
-gsap.registerPlugin(ScrollTrigger);
+  gsap.from(".logo-item", {
+    scrollTrigger: {
+      trigger: ".logos-grid",
+      start: "top 80%",
+      toggleActions: "play none none none"
+    },
+    duration: 0.6,
+    y: 30,
+    opacity: 0,
+    stagger: 0.1,
+    ease: "back.out"
+  });
 
-// What We Do Section
-gsap.from(".what-we-do .text-block", {
-  scrollTrigger: {
-    trigger: ".what-we-do",
-    start: "top 80%",
-  },
-  opacity: 0,
-  y: 50,
-  duration: 1,
-  stagger: 0.3,
-});
+  // CTA Section Animation
+  gsap.from(".about-cta h2", {
+    scrollTrigger: {
+      trigger: ".about-cta",
+      start: "top 80%",
+      toggleActions: "play none none none"
+    },
+    duration: 1,
+    y: -30,
+    opacity: 0,
+    ease: "power2.out"
+  });
 
+  gsap.from(".about-cta p", {
+    scrollTrigger: {
+      trigger: ".about-cta",
+      start: "top 80%",
+      toggleActions: "play none none none"
+    },
+    duration: 1,
+    y: 30,
+    opacity: 0,
+    ease: "power2.out"
+  });
 
-// Our Team Section
-gsap.from(".our-team .team-card", {
-  scrollTrigger: {
-    trigger: ".our-team",
-    start: "top 80%",
-  },
-  opacity: 0,
-  y: 50,
-  duration: 1,
-  stagger: 0.2,
-});
-
-gsap.from(".partners-clients .logo-item", {
-  scrollTrigger: {
-    trigger: ".partners-clients",
-    start: "top 80%",
-  },
-  opacity: 0,
-  y: 50,
-  duration: 1,
-  stagger: 0.2,
-});
-
-gsap.from(".partners-clients .achievement-text", {
-  scrollTrigger: {
-    trigger: ".partners-clients",
-    start: "top 80%",
-  },
-  opacity: 0,
-  y: 50,
-  duration: 1,
-});
-
-// CTA Section
-gsap.from(".cta", {
-  scrollTrigger: {
-    trigger: ".cta",
-    start: "top 80%",
-  },
-  opacity: 0,
-  y: 50,
-  duration: 1,
+  gsap.from(".cta-buttons", {
+    scrollTrigger: {
+      trigger: ".about-cta",
+      start: "top 80%",
+      toggleActions: "play none none none"
+    },
+    duration: 1,
+    scale: 0.9,
+    opacity: 0,
+    ease: "elastic.out(1, 0.5)"
+  });
 });

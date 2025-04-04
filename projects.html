@@ -3,66 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar Design</title>
-    <link rel="stylesheet" href="assets/css/projects.css">
+    <title>Contact Us | Locogen</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/projects.css">
 </head>
 <body>
 
-<section class="projects-section">
-    <!-- Project 1 -->
-    <div class="project" data-project="1">
-        <div class="project-content">
-            <h2>Project Title 1</h2>
-            <p>This is a detailed description of the project. It provides more information about the key features, challenges, and impact.</p>
-            <div class="project-images">
-                <img src="assets/img/3932.jpg" alt="Project 1 Image 1">
-                <img src="assets/img/project1-2.jpg" alt="Project 1 Image 2">
-                <img src="assets/img/project1-3.jpg" alt="Project 1 Image 3">
+<main class="projects-main">
+    <div class="projects-container">
+        <div class="projects-header">
+            <h1>Our <span>Reference</span> Projects</h1>
+            <p class="subtitle">Delivering construction solutions for complex challenges</p>
+            <div class="filter-buttons">
+                <button class="active" data-filter="all">All Projects</button>
+                <button data-filter="commercial">Commercial</button>
+                <button data-filter="industrial">Industrial</button>
+                <button data-filter="infrastructure">Infrastructure</button>
             </div>
         </div>
-    </div>
-    <!-- Project 2 -->
-    <div class="project" data-project="2">
-        <div class="project-content">
-            <h2>Project Title 2</h2>
-            <p>This is a detailed description of the project. It provides more information about the key features, challenges, and impact.</p>
-            <div class="project-images">
-                <img src="assets/img/3932.jpg" alt="Project 2 Image 1">
-                <img src="assets/img/project2-2.jpg" alt="Project 2 Image 2">
-                <img src="assets/img/project2-3.jpg" alt="Project 2 Image 3">
+
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card" data-category="commercial" onclick="showProjectModal('Manhattan Financial Center', '25-story commercial tower in NYC financial district', 'Provided structural engineering solutions for this LEED Gold certified office complex. Our team designed the steel frame system that allowed for the large open floor plates required by the financial tenants.', '2022', '180,000 sq.ft', 'New York, USA')">
+                <div class="project-image">
+                    <img src="assets/img/1.jpeg" alt="Commercial Office Complex">
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Commercial</span>
+                    <h3>Manhattan Financial Center</h3>
+                    <div class="project-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 2022</span>
+                        <span><i class="fas fa-ruler-combined"></i> 180,000 sq.ft</span>
+                    </div>
+                </div>
             </div>
+
+            <!-- Project 2 -->
+            <div class="project-card" data-category="industrial" onclick="showProjectModal('Bavarian Auto Works', 'Automotive manufacturing plant expansion', 'Designed and engineered the structural systems for this state-of-the-art production facility. Our solutions enabled the 30% expansion of their assembly lines while maintaining continuous operations.', '2021', '450,000 sq.ft', 'Stuttgart, Germany')">
+                <div class="project-image">
+                    <img src="assets/img/2.jpeg" alt="Industrial Plant">
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Industrial</span>
+                    <h3>Bavarian Auto Works</h3>
+                    <div class="project-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 2021</span>
+                        <span><i class="fas fa-ruler-combined"></i> 450,000 sq.ft</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card" data-category="infrastructure" onclick="showProjectModal('Fraser River Crossing', '1.2km suspension bridge', 'Provided engineering solutions for this critical river crossing, including innovative approaches to foundation design in challenging soil conditions. The project was completed 3 months ahead of schedule.', '2020', '1,200 meters', 'Vancouver, Canada')">
+                <div class="project-image">
+                    <img src="assets/img/3.jpeg" alt="Bridge Project">
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Infrastructure</span>
+                    <h3>Fraser River Crossing</h3>
+                    <div class="project-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 2020</span>
+                        <span><i class="fas fa-ruler-combined"></i> 1,200 meters</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="commercial" onclick="showProjectModal('Manhattan Financial Center', '25-story commercial tower in NYC financial district', 'Provided structural engineering solutions for this LEED Gold certified office complex. Our team designed the steel frame system that allowed for the large open floor plates required by the financial tenants.', '2022', '180,000 sq.ft', 'New York, USA')">
+                <div class="project-image">
+                    <img src="assets/img/4.jpeg" alt="Commercial Office Complex">
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Commercial</span>
+                    <h3>Manhattan Financial Center</h3>
+                    <div class="project-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 2022</span>
+                        <span><i class="fas fa-ruler-combined"></i> 180,000 sq.ft</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card" data-category="industrial" onclick="showProjectModal('Bavarian Auto Works', 'Automotive manufacturing plant expansion', 'Designed and engineered the structural systems for this state-of-the-art production facility. Our solutions enabled the 30% expansion of their assembly lines while maintaining continuous operations.', '2021', '450,000 sq.ft', 'Stuttgart, Germany')">
+                <div class="project-image">
+                    <img src="assets/img/5.jpeg" alt="Industrial Plant">
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Industrial</span>
+                    <h3>Bavarian Auto Works</h3>
+                    <div class="project-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 2021</span>
+                        <span><i class="fas fa-ruler-combined"></i> 450,000 sq.ft</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card" data-category="infrastructure" onclick="showProjectModal('Fraser River Crossing', '1.2km suspension bridge', 'Provided engineering solutions for this critical river crossing, including innovative approaches to foundation design in challenging soil conditions. The project was completed 3 months ahead of schedule.', '2020', '1,200 meters', 'Vancouver, Canada')">
+                <div class="project-image">
+                    <img src="assets/img/6.jpeg" alt="Bridge Project">
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Infrastructure</span>
+                    <h3>Fraser River Crossing</h3>
+                    <div class="project-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 2020</span>
+                        <span><i class="fas fa-ruler-combined"></i> 1,200 meters</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="commercial" onclick="showProjectModal('Manhattan Financial Center', '25-story commercial tower in NYC financial district', 'Provided structural engineering solutions for this LEED Gold certified office complex. Our team designed the steel frame system that allowed for the large open floor plates required by the financial tenants.', '2022', '180,000 sq.ft', 'New York, USA')">
+                <div class="project-image">
+                    <img src="assets/img/7.jpeg" alt="Commercial Office Complex">
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Commercial</span>
+                    <h3>Manhattan Financial Center</h3>
+                    <div class="project-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 2022</span>
+                        <span><i class="fas fa-ruler-combined"></i> 180,000 sq.ft</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card" data-category="industrial" onclick="showProjectModal('Bavarian Auto Works', 'Automotive manufacturing plant expansion', 'Designed and engineered the structural systems for this state-of-the-art production facility. Our solutions enabled the 30% expansion of their assembly lines while maintaining continuous operations.', '2021', '450,000 sq.ft', 'Stuttgart, Germany')">
+                <div class="project-image">
+                    <img src="assets/img/8.jpeg" alt="Industrial Plant">
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Industrial</span>
+                    <h3>Bavarian Auto Works</h3>
+                    <div class="project-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 2021</span>
+                        <span><i class="fas fa-ruler-combined"></i> 450,000 sq.ft</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card" data-category="infrastructure" onclick="showProjectModal('Fraser River Crossing', '1.2km suspension bridge', 'Provided engineering solutions for this critical river crossing, including innovative approaches to foundation design in challenging soil conditions. The project was completed 3 months ahead of schedule.', '2020', '1,200 meters', 'Vancouver, Canada')">
+                <div class="project-image">
+                    <img src="assets/img/10.jpg" alt="Bridge Project">
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Infrastructure</span>
+                    <h3>Fraser River Crossing</h3>
+                    <div class="project-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 2020</span>
+                        <span><i class="fas fa-ruler-combined"></i> 1,200 meters</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 4-7 would follow same pattern -->
         </div>
     </div>
-    <!-- Project 3 -->
-    <div class="project" data-project="3">
-        <div class="project-content">
-            <h2>Project Title 3</h2>
-            <p>This is a detailed description of the project. It provides more information about the key features, challenges, and impact.</p>
-            <div class="project-images">
-                <img src="assets/img/project3-1.jpg" alt="Project 3 Image 1">
-                <img src="assets/img/3932.jpg" alt="Project 3 Image 2">
-                <img src="assets/img/project3-3.jpg" alt="Project 3 Image 3">
-            </div>
+</main>
+
+<!-- Project Modal -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <h3 id="modalSubtitle"></h3>
+        <div class="modal-image-container">
+            <img id="modalImage" src="" alt="">
+        </div>
+        <p id="modalDescription"></p>
+        <div class="modal-details">
+            <p><strong>Completion:</strong> <span id="modalYear"></span></p>
+            <p><strong>Size:</strong> <span id="modalSize"></span></p>
+            <p><strong>Location:</strong> <span id="modalLocation"></span></p>
         </div>
     </div>
-    <!-- Project 4 -->
-    <div class="project" data-project="4">
-        <div class="project-content">
-            <h2>Project Title 4</h2>
-            <p>This is a detailed description of the project. It provides more information about the key features, challenges, and impact.</p>
-            <div class="project-images">
-                <img src="assets/img/project4-1.jpg" alt="Project 4 Image 1">
-                <img src="assets/img/3932.jpg" alt="Project 4 Image 2">
-                <img src="assets/img/project4-3.jpg" alt="Project 4 Image 3">
-            </div>
-        </div>
-    </div>
-</section>
+</div>
+
 <!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-<script src="assets/js/loadcomponents.js"></script>
 <script src="assets/js/projects.js"></script>
+<script src="assets/js/loadcomponents.js"></script>
 </body>
 </html>
