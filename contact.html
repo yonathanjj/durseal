@@ -19,13 +19,14 @@
 
     <div class="contact-info">
         <h2><i class="fas fa-building"></i> Head Office</h2>
-        <div class="address" onclick="openMap('4 West Silvermills Lane, Edinburgh EH15 5BD')">
+        <div class="address" onclick="window.open('https://maps.app.goo.gl/cqdX4FyvfmZBy2Q68', '_blank')">
             <p>KN 3 ST. Sonatube, Kigali, Rwanda</p>
             <p class="map-link"><i class="fas fa-map-marker-alt"></i> View on map</p>
         </div>
         <p><strong><i class="fas fa-envelope"></i> Email:</strong> info@durasealltd.com</p>
         <p><strong><i class="fas fa-phone"></i> Telephone:</strong> +250795584416</p>
     </div>
+
 
     <form class="contact-form">
         <!-- Name -->
@@ -48,19 +49,6 @@
         <div class="form-group">
             <label for="company">Company*</label>
             <input type="text" id="company" name="company" required>
-        </div>
-
-        <!-- Country Dropdown with Search -->
-        <div class="form-group">
-            <label for="country">Country*</label>
-            <select id="country" name="country" required>
-                <option value="">Search or select a country...</option>
-                <option value="US">United States</option>
-                <option value="UK">United Kingdom</option>
-                <option value="CA">Canada</option>
-                <option value="AU">Australia</option>
-                <!-- Add more countries as needed -->
-            </select>
         </div>
 
         <!-- Solution Interest -->
@@ -98,18 +86,20 @@
     <div class="locations-section">
         <h2><i class="fas fa-map-marked-alt"></i> Showrooms</h2>
         <div class="locations-grid">
-            <div class="location-card" onclick="openMap('4 West Silvermills Lane, Edinburgh EH15 5BD')">
+            <div class="location-card" onclick="window.open('https://maps.app.goo.gl/cqdX4FyvfmZBy2Q68', '_blank')">
                 <h3>Gisozi Showroom</h3>
                 <p>KG 33 ST. Gisozi, Kigali, Rwanda</p>
                 <div class="map-preview" id="map1"></div>
                 <p class="map-link"><i class="fas fa-map-marker-alt"></i> View on map</p>
             </div>
-            <div class="location-card" onclick="openMap('4 West Silvermills Lane, Edinburgh EH15 5BD')">
+
+            <div class="location-card" onclick="window.open('https://maps.app.goo.gl/eW9gA5o3scHi6hr77', '_blank')">
                 <h3>Gisozi Showroom</h3>
                 <p>KG 33 ST. Gisozi, Kigali, Rwanda</p>
-                <div class="map-preview" id="map1"></div>
+                <div class="map-preview" id="map2"></div>
                 <p class="map-link"><i class="fas fa-map-marker-alt"></i> View on map</p>
             </div>
+
         </div>
 
     </div>
