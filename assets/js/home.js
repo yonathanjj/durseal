@@ -28,26 +28,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Animate statistics counting
-    const statNumbers = document.querySelectorAll(".stat-number");
-    statNumbers.forEach(stat => {
-        const target = parseInt(stat.getAttribute("data-count"));
-        const duration = 2000;
-        const start = 0;
-        const increment = target / (duration / 16);
-
-        let current = start;
-        const timer = setInterval(() => {
-            current += increment;
-            stat.textContent = Math.floor(current);
-
-            if (current >= target) {
-                stat.textContent = target + "+";
-                clearInterval(timer);
-            }
-        }, 16);
-    });
-
     // Product Filtering
     const filterButtons = document.querySelectorAll(".filter-btn");
     const productCards = document.querySelectorAll(".product-card");
@@ -218,4 +198,67 @@ document.addEventListener("DOMContentLoaded", function() {
         ease: "power2.out",
         delay: 0.9
     });
+});
+
+
+
+// Modal Functions
+function openProjectModal(projectId) {
+    event.preventDefault();
+    document.getElementById(projectId + '-modal').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function openBlogModal(blogId) {
+    event.preventDefault();
+    document.getElementById(blogId + '-modal').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    document.querySelectorAll('.modal').forEach(modal => {
+        modal.style.display = 'none';
+    });
+    document.body.style.overflow = 'auto';
+}
+
+// Close modal when clicking outside content
+window.onclick = function(event) {
+    if (event.target.className === 'modal') {
+        closeModal();
+    }
+}
+
+// Update project card click handlers
+document.addEventListener("DOMContentLoaded", function() {
+    // Add click handlers to all project explore buttons
+    document.querySelectorAll('.project-card .explore-btn').forEach((btn, index) => {
+        btn.onclick = function(e) {
+            e.preventDefault();
+            openProjectModal('project' + (index + 1));
+        };
+    });
+
+    // Add click handlers to all blog read more buttons
+    document.querySelectorAll('.blog-card .read-more').forEach((btn, index) => {
+        btn.onclick = function(e) {
+            e.preventDefault();
+            openBlogModal('blog' + (index + 1));
+        };
+    });
+
+    // Add close button handlers
+    document.querySelectorAll('.close-modal').forEach(btn => {
+        btn.onclick = closeModal;
+    });
+
+    // Rest of your existing DOMContentLoaded code...
+    // (Keep all your existing slider, filtering, and animation code here)
+});
+
+// Keyboard accessibility for modals
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeModal();
+    }
 });

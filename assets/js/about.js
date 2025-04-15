@@ -4,31 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Register ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
 
-    // Hero Section Animations
-    gsap.from(".hero-content h1", {
-      duration: 1,
-      y: -50,
-      opacity: 0,
-      ease: "power2.out",
-      delay: 0.5
-    });
-
-    gsap.from(".hero-content p", {
-      duration: 1,
-      y: -50,
-      opacity: 0,
-      ease: "power2.out",
-      delay: 1
-    });
-
-    gsap.from(".hero-section .cta-button", {
-      duration: 1,
-      y: -50,
-      opacity: 0,
-      ease: "power2.out",
-      delay: 1.5
-    });
-
     // Story Section Animations
     gsap.from(".story-content h2", {
       scrollTrigger: {
