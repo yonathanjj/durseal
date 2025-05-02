@@ -314,41 +314,101 @@
         </div>
     </section>
 
-    <!-- Solution Modal -->
-    <div class="modal" id="solutionModal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <div class="modal-image-container">
-                <img src="" alt="" id="modalImage">
-            </div>
-            <h2 id="modalTitle">Solution Title</h2>
-            <h3 id="modalSubtitle">Solution Category</h3>
+    <!-- Updated Modal HTML -->
+<div class="modal" id="solutionModal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="modal-image-container">
+            <img src="" alt="" id="modalImage">
+        </div>
+        <h2 id="modalTitle">Solution Title</h2>
+        <h3 id="modalSubtitle">Solution Category</h3>
 
-            <div class="modal-details">
+        <div class="modal-specs">
+            <div class="spec-item">
+                <i class="fas fa-ruler-combined"></i>
                 <div>
-                    <p><strong>Applications:</strong></p>
-                    <p id="modalApplications">Loading applications...</p>
-                </div>
-                <div>
-                    <p><strong>Features:</strong></p>
-                    <p id="modalFeatures">Loading features...</p>
+                    <h4>Size</h4>
+                    <p id="modalSize">Loading size info...</p>
                 </div>
             </div>
-
-            <div class="modal-description">
-                <p id="modalDescription">Loading detailed description...</p>
+            <div class="spec-item">
+                <i class="fas fa-vector-square"></i>
+                <div>
+                    <h4>Coverage</h4>
+                    <p id="modalCoverage">Loading coverage info...</p>
+                </div>
             </div>
-
-            <div class="modal-actions">
-                <a href="#" class="modal-btn" download>
-                    <i class="fas fa-download"></i> Download Technical Sheet
-                </a>
-                <a href="contact.html" class="modal-btn secondary">
-                    <i class="fas fa-envelope"></i> Contact Our Experts
-                </a>
+            <div class="spec-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                    <h4>Drying Time</h4>
+                    <p id="modalDryingTime">Loading drying time...</p>
+                </div>
             </div>
         </div>
+
+        <div class="modal-details">
+            <div class="details-section">
+                <h4>Applications</h4>
+                <p id="modalApplications">Loading applications...</p>
+            </div>
+            <div class="details-section">
+                <h4>Features</h4>
+                <p id="modalFeatures">Loading features...</p>
+            </div>
+        </div>
+
+        <div class="modal-cards-container">
+            <div class="modal-card">
+                <div class="modal-card-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Key Benefits</h4>
+                <ul id="modalBenefits">
+                    <!-- Benefits will be added by JS -->
+                </ul>
+            </div>
+
+            <div class="modal-card">
+                <div class="modal-card-icon">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <h4>Technical Features</h4>
+                <ul id="modalTechFeatures">
+                    <!-- Tech features will be added by JS -->
+                </ul>
+            </div>
+
+            <div class="modal-card">
+                <div class="modal-card-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h4>How to Apply</h4>
+                <ol id="modalApplicationSteps">
+                    <!-- Application steps will be added by JS -->
+                </ol>
+            </div>
+        </div>
+
+        <div class="modal-description">
+            <h4>Product Description</h4>
+            <p id="modalDescription">Loading detailed description...</p>
+        </div>
+
+        <div class="modal-actions">
+            <a href="#" class="modal-btn" download id="techSheetBtn">
+                <i class="fas fa-file-alt"></i> Technical Sheet
+            </a>
+            <a href="#" class="modal-btn" download id="safetySheetBtn">
+                <i class="fas fa-file-contract"></i> Safety Data Sheet
+            </a>
+            <a href="contact.html" class="modal-btn secondary">
+                <i class="fas fa-envelope"></i> Contact Our Experts
+            </a>
+        </div>
     </div>
+</div>
 </main>
 
 <script src="assets/js/solutions.js"></script>

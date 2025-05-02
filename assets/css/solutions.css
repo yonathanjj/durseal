@@ -226,7 +226,7 @@ body {
 
 
 
-/* Modal Styles - Fixed Image Version */
+/* Modal Styles - Complete Version */
 .modal {
     display: none;
     position: fixed;
@@ -275,7 +275,7 @@ body {
     color: var(--primary);
 }
 
-/* Fixed Image Container */
+/* Modal Image Container */
 .modal-image-container {
     height: 350px;
     max-height: 40vh;
@@ -289,7 +289,6 @@ body {
     position: relative;
 }
 
-/* Smart Image Handling */
 .modal-image-container img {
     width: auto;
     height: auto;
@@ -299,30 +298,41 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* For specific image types if needed */
-.modal-image-container[data-image-type="product"] img {
-    object-fit: cover;
+/* Modal Specifications */
+.modal-specs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
 
-.modal-image-container[data-image-type="packaging"] img {
-    max-width: 90%;
-    max-height: 90%;
+.spec-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-/* Modal Content Styles */
-.modal-content h2 {
+.spec-item i {
+    font-size: 1.5rem;
     color: var(--primary);
-    margin-bottom: 10px;
-    font-size: 1.8rem;
 }
 
-.modal-content h3 {
-    color: var(--text);
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-    font-weight: 500;
+.spec-item h4 {
+    margin: 0 0 5px 0;
+    font-size: 0.95rem;
+    color: var(--primary);
 }
 
+.spec-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* Modal Details Sections */
 .modal-details {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -339,6 +349,84 @@ body {
     line-height: 1.6;
 }
 
+.details-section h4 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Modal Cards Container */
+.modal-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.modal-card {
+    background: #f9f9f9;
+    border-radius: var(--radius);
+    padding: 20px;
+    transition: var(--transition);
+}
+
+.modal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.modal-card-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.modal-card-icon i {
+    font-size: 1.2rem;
+}
+
+.modal-card h4 {
+    margin: 0 0 15px 0;
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.modal-card ul, .modal-card ol {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.modal-card li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* Modal Description */
+.modal-description {
+    margin: 20px 0;
+}
+
+.modal-description h4 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.modal-description p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+/* Modal Actions */
 .modal-actions {
     display: flex;
     gap: 15px;
@@ -358,6 +446,10 @@ body {
     flex-grow: 1;
     justify-content: center;
     text-align: center;
+}
+
+.modal-btn i {
+    font-size: 0.9rem;
 }
 
 .modal-btn.primary {
@@ -403,6 +495,10 @@ body {
     .modal-actions {
         flex-direction: column;
     }
+
+    .modal-specs {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (max-width: 576px) {
@@ -417,7 +513,12 @@ body {
         max-height: 30vh;
     }
 
-    .modal-details {
+    .modal-details,
+    .modal-specs {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-cards-container {
         grid-template-columns: 1fr;
     }
 
@@ -427,5 +528,10 @@ body {
 
     .modal-content h3 {
         font-size: 1.1rem;
+    }
+
+    .modal-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
     }
 }
