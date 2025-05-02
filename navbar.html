@@ -2,115 +2,81 @@
   <div class="navbar-content">
     <!-- Logo -->
     <a href="index.html" class="logo">
-      <img src="assets/img/logo.png" alt="Logo">
+      <img src="assets/img/logo.png" alt="Company Logo">
     </a>
 
-    <!-- Navigation Links -->
-    <ul class="nav-links">
-      <li class="dropdown">
-        <a href="solutions.html" class="dropdown-toggle">Solutions &nbsp;<i class="fas fa-chevron-down"></i></a>
-        <div class="dropdown-menu">
-          <div class="dropdown-menu-content">
-            <!-- Products Section -->
-            <div class="dropdown-section">
-              <h3 class="section-title">Our Products</h3>
-              <div class="dropdown-columns">
-                <div class="dropdown-column">
-                  <h4>Waterproofing</h4>
-                  <a href="#">Integral Waterproofing</a>
-                  <a href="#">Crystalline Coating</a>
-                  <a href="#">APP/Bituminous Membrane</a>
-                </div>
-                <div class="dropdown-column">
-                  <h4>Protective Coatings</h4>
-                  <a href="#">Top Coat</a>
-                  <a href="#">Two-Component Under Coat</a>
-                  <h4>Tile Solutions</h4>
-                  <a href="#">Tile Fixing</a>
-                </div>
-                <div class="dropdown-column">
-                  <h4>Construction Materials</h4>
-                  <a href="#">Sealants</a>
-                  <a href="#">Latex</a>
-                  <a href="#">Floor Hardener</a>
-                  <a href="#">Construction Foam</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Solutions Section -->
-            <div class="dropdown-section">
-              <h3 class="section-title">Application Areas</h3>
-              <div class="dropdown-columns">
-                <div class="dropdown-column">
-                  <h4>Exterior</h4>
-                  <a href="#">External Wall</a>
-                  <a href="#">Terrace/Roof</a>
-                  <a href="#">Foundation/Basement</a>
-                </div>
-                <div class="dropdown-column">
-                  <h4>Interior</h4>
-                  <a href="#">Internal Wall</a>
-                  <a href="#">Bathroom</a>
-                  <a href="#">Tile Fixing</a>
-                </div>
-                <div class="dropdown-column">
-                  <h4>Specialized</h4>
-                  <a href="#">Swimming Pool</a>
-                  <a href="#">Water Tank</a>
-                  <a href="#">Concrete/Plaster Additives</a>
-                  <a href="#">Expansion Joints</a>
+    <!-- Centered Navigation Links -->
+    <div class="nav-center">
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="solutions.html" class="dropdown-toggle">Solutions <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-menu">
+            <div class="dropdown-menu-content">
+              <div class="dropdown-section">
+                <h3 class="section-title">Our Products</h3>
+                <div class="dropdown-columns">
+                  <div class="dropdown-column">
+                    <h4>Waterproofing</h4>
+                    <a href="solutions.html">Integral Waterproofing</a>
+                    <a href="solutions.html">Crystalline Coating</a>
+                    <a href="solutions.html">APP/Bituminous Membrane</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>Protective Coatings</h4>
+                    <a href="solutions.html">Top Coat</a>
+                    <a href="solutions.html">Two-Component Under Coat</a>
+                    <h4>Tile Solutions</h4>
+                    <a href="solutions.html">Tile Fixing</a>
+                    <a href="solutions.html">Tile Grout</a>
+                  </div>
+                  <div class="dropdown-column">
+                    <h4>Construction Materials</h4>
+                    <a href="solutions.html">Sealants</a>
+                    <a href="solutions.html">Latex</a>
+                    <a href="solutions.html">Floor Hardener</a>
+                    <a href="solutions.html">Construction Foam</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="career.html">Careers</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-
-    <!-- Search Bar -->
-    <div class="search-container">
-      <div class="search-bar">
-        <input type="text" placeholder="Search..." id="search-input">
-        <button id="search-button"><i class="fas fa-search"></i></button>
-      </div>
-      <div class="search-results" id="search-results"></div>
+        </li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="career.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
 
     <!-- Hamburger Menu (Mobile) -->
-    <div class="hamburger">
+    <div class="hamburger" aria-expanded="false" aria-label="Menu">
       <i class="fas fa-bars"></i>
     </div>
   </div>
 </nav>
 
 <style>
-  /* General Styles */
+  /* Base Styles */
   body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
   }
 
-  /* Navbar */
+  /* Navbar Container */
   .navbar {
     background-color: #010B13;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 1000;
-    transition: top 0.3s;
-    height: 100px;
+    height: 80px;
     display: flex;
     align-items: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   }
 
   .navbar-content {
-    width: 90%;
+    width: 95%;
     max-width: 1400px;
     margin: 0 auto;
     display: flex;
@@ -121,7 +87,8 @@
 
   /* Logo */
   .logo img {
-    height: 70px;
+    height: 50px;
+    width: auto;
     transition: transform 0.3s;
   }
 
@@ -129,11 +96,18 @@
     transform: scale(1.05);
   }
 
+  /* Centered Navigation */
+  .nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   /* Navigation Links */
   .nav-links {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 25px;
     margin: 0;
     padding: 0;
     align-items: center;
@@ -142,14 +116,13 @@
   .nav-links > li > a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     display: flex;
     align-items: center;
     transition: all 0.3s;
     padding: 8px 12px;
     border-radius: 4px;
-    position: relative;
   }
 
   .nav-links > li > a:hover {
@@ -166,72 +139,59 @@
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #010B13;
-    width: 900px;
+    width: 600px;
     padding: 0;
     border-radius: 8px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    animation: fadeIn 0.3s ease-in-out;
     border-top: 3px solid #ffcc00;
     overflow: hidden;
     z-index: 1001;
-  }
-
-  .dropdown-menu-content {
-    max-height: 70vh;
-    overflow-y: auto;
-    padding: 25px;
+    animation: fadeIn 0.3s ease-out;
   }
 
   .dropdown:hover .dropdown-menu {
     display: block;
   }
 
-  .dropdown-section {
-    margin-bottom: 25px;
-  }
-
-  .dropdown-section:last-child {
-    margin-bottom: 0;
+  .dropdown-menu-content {
+    padding: 20px;
   }
 
   .section-title {
     color: #ffcc00;
     margin: 0 0 15px 0;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     padding-bottom: 8px;
     border-bottom: 1px solid rgba(255, 204, 0, 0.3);
-    position: sticky;
-    top: 0;
-    background-color: #010B13;
-    z-index: 1;
   }
 
   .dropdown-columns {
     display: flex;
-    gap: 30px;
+    gap: 20px;
   }
 
   .dropdown-column {
     flex: 1;
-    min-width: 180px;
+    min-width: 160px;
   }
 
   .dropdown-column h4 {
     color: white;
-    margin: 15px 0 10px 0;
-    font-size: 16px;
+    margin: 10px 0 8px 0;
+    font-size: 14px;
     font-weight: 500;
   }
 
   .dropdown-column a {
     color: #e0e0e0;
     display: block;
-    padding: 6px 0;
+    padding: 5px 0;
     transition: all 0.2s;
-    font-size: 14px;
+    font-size: 13px;
     text-decoration: none;
   }
 
@@ -240,172 +200,82 @@
     padding-left: 5px;
   }
 
-  /* Search Bar */
-  .search-container {
-    position: relative;
-  }
-
-  .search-bar {
-    display: flex;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 25px;
-    padding: 5px 15px;
-    transition: all 0.3s;
-    border: 1px solid transparent;
-  }
-
-  .search-bar:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.3);
-  }
-
-  .search-bar input {
-    padding: 8px;
-    border: none;
-    background: transparent;
-    color: white;
-    outline: none;
-    width: 150px;
-    transition: width 0.3s;
-  }
-
-  .search-bar input:focus {
-    width: 200px;
-  }
-
-  .search-bar button {
-    padding: 8px 12px;
-    border: none;
-    background: transparent;
-    color: white;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
-
-  .search-bar button:hover {
-    color: #ffcc00;
-  }
-
-  .search-results {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 300px;
-    max-height: 400px;
-    overflow-y: auto;
-    background-color: #010B13;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    padding: 15px;
-    z-index: 1001;
-    margin-top: 5px;
-  }
-
-  .search-results.active {
-    display: block;
-  }
-
-  .search-results a {
-    display: block;
-    color: white;
-    padding: 8px 0;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    transition: color 0.2s;
-  }
-
-  .search-results a:hover {
-    color: #ffcc00;
-  }
-
-  /* Hamburger Menu (Mobile) */
+  /* Hamburger Menu */
   .hamburger {
     display: none;
     color: white;
-    font-size: 24px;
+    font-size: 22px;
     cursor: pointer;
-    padding: 10px;
-    margin-left: 15px;
+    padding: 8px;
     z-index: 1002;
+    background: none;
+    border: none;
   }
 
-  /* Responsive Design */
-  @media (max-width: 1024px) {
-    .dropdown-menu {
-      width: 700px;
-      left: -200px;
+  /* Mobile Styles */
+  @media (max-width: 992px) {
+    .hamburger {
+      display: block;
     }
-  }
 
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-      flex-direction: column;
+    .nav-center {
       position: fixed;
-      top: 100px;
+      top: 80px;
       left: 0;
       width: 100%;
+      transform: none;
+      display: none;
+    }
+
+    .nav-links {
+      flex-direction: column;
+      gap: 0;
+      padding: 0;
       background-color: #010B13;
-      padding: 20px;
-      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-      max-height: calc(100vh - 100px);
+      height: calc(100vh - 80px);
       overflow-y: auto;
-      z-index: 1000;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
     }
 
     .nav-links.active {
+      transform: translateX(0);
       display: flex;
     }
 
-    .nav-links li {
-      padding: 12px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    .nav-links > li {
       width: 100%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .nav-links li:last-child {
-      border-bottom: none;
-    }
-
-    .hamburger {
-      display: block;
-      order: 1;
-    }
-
-    .search-container {
-      order: 2;
-      margin-left: auto;
-      margin-right: 15px;
+    .nav-links > li > a {
+      padding: 15px 20px;
+      font-size: 16px;
     }
 
     .dropdown-menu {
-      position: relative;
+      position: static;
       width: 100%;
-      padding: 0;
-      box-shadow: none;
+      transform: none;
       display: none;
       background-color: rgba(0, 0, 0, 0.2);
-      border: none;
       border-radius: 0;
-      max-height: 0;
-      transition: max-height 0.3s ease-out;
+      border: none;
+      box-shadow: none;
+      animation: none;
     }
 
     .dropdown-menu.active {
       display: block;
-      max-height: 500px;
-    }
-
-    .dropdown-menu-content {
-      padding: 15px;
-      max-height: 400px;
     }
 
     .dropdown-columns {
       flex-direction: column;
       gap: 15px;
+    }
+
+    .dropdown-column {
+      min-width: 100%;
     }
 
     .dropdown-toggle::after {
@@ -418,20 +288,6 @@
 
     .dropdown-toggle.active::after {
       transform: rotate(180deg);
-    }
-  }
-
-  @media (max-width: 480px) {
-    .navbar-content {
-      width: 95%;
-    }
-
-    .search-bar input {
-      width: 120px;
-    }
-
-    .search-bar input:focus {
-      width: 150px;
     }
   }
 
@@ -450,152 +306,65 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
-
-    hamburger.addEventListener('click', function() {
-      this.classList.toggle('active');
-      navLinks.classList.toggle('active');
-
-      // Close all dropdowns when closing mobile menu
-      if (!navLinks.classList.contains('active')) {
-        document.querySelectorAll('.dropdown-menu').forEach(menu => {
-          menu.classList.remove('active');
-        });
-        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-          toggle.classList.remove('active');
-        });
-      }
-    });
-
-    // Dropdown toggle for desktop and mobile
     const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
 
+    // Mobile menu toggle
+    hamburger.addEventListener('click', function() {
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !isExpanded);
+      navLinks.classList.toggle('active');
+    });
+
+    // Mobile dropdown toggle
     dropdownToggles.forEach(toggle => {
       toggle.addEventListener('click', function(e) {
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 992) {
           e.preventDefault();
-          const dropdown = this.parentElement;
-          const menu = dropdown.querySelector('.dropdown-menu');
+          const menu = this.nextElementSibling;
+          const isActive = menu.classList.contains('active');
 
-          // Close other dropdowns
-          document.querySelectorAll('.dropdown-menu').forEach(otherMenu => {
-            if (otherMenu !== menu) {
-              otherMenu.classList.remove('active');
-            }
-          });
+          // Close all dropdowns first
+          document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('active'));
+          document.querySelectorAll('.dropdown-toggle').forEach(t => t.classList.remove('active'));
 
-          document.querySelectorAll('.dropdown-toggle').forEach(otherToggle => {
-            if (otherToggle !== this) {
-              otherToggle.classList.remove('active');
-            }
-          });
-
-          // Toggle current dropdown
-          this.classList.toggle('active');
-          menu.classList.toggle('active');
+          // Open current if wasn't active
+          if (!isActive) {
+            menu.classList.add('active');
+            this.classList.add('active');
+          }
         }
       });
     });
 
-    // Close dropdowns when clicking outside
+    // Close menu when clicking outside
     document.addEventListener('click', function(e) {
-      if (!e.target.closest('.dropdown') && window.innerWidth <= 768) {
-        document.querySelectorAll('.dropdown-menu').forEach(menu => {
-          menu.classList.remove('active');
-        });
-        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-          toggle.classList.remove('active');
-        });
+      if (window.innerWidth <= 992) {
+        if (!e.target.closest('.navbar-content') && !e.target.matches('.hamburger, .hamburger *')) {
+          hamburger.setAttribute('aria-expanded', 'false');
+          navLinks.classList.remove('active');
+          document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('active'));
+          document.querySelectorAll('.dropdown-toggle').forEach(t => t.classList.remove('active'));
+        }
       }
     });
 
-    // Navbar scroll behavior
+    // Navbar hide on scroll down
     let lastScroll = 0;
     const navbar = document.querySelector('.navbar');
-
     window.addEventListener('scroll', () => {
       const currentScroll = window.pageYOffset;
-
       if (currentScroll <= 0) {
         navbar.style.top = '0';
         return;
       }
-
       if (currentScroll > lastScroll && currentScroll > 100) {
-        // Scrolling down
-        navbar.style.top = '-100px';
+        navbar.style.top = '-80px';
       } else {
-        // Scrolling up
         navbar.style.top = '0';
       }
-
       lastScroll = currentScroll;
-    });
-
-    // Search functionality
-    const searchInput = document.getElementById('search-input');
-    const searchButton = document.getElementById('search-button');
-    const searchResults = document.getElementById('search-results');
-
-    // Sample search data - replace with your actual search data
-    const searchData = [
-      { title: "Integral Waterproofing", url: "#" },
-      { title: "Crystalline Coating", url: "#" },
-      { title: "Tile Fixing Solutions", url: "#" },
-      { title: "Construction Foam", url: "#" },
-      { title: "Swimming Pool Solutions", url: "#" },
-      { title: "Water Tank Protection", url: "#" }
-    ];
-
-    function performSearch(query) {
-      if (!query.trim()) {
-        searchResults.classList.remove('active');
-        return;
-      }
-
-      const results = searchData.filter(item =>
-        item.title.toLowerCase().includes(query.toLowerCase())
-      );
-
-      displayResults(results);
-    }
-
-    function displayResults(results) {
-      searchResults.innerHTML = '';
-
-      if (results.length === 0) {
-        searchResults.innerHTML = '<div class="no-results">No results found</div>';
-      } else {
-        results.forEach(result => {
-          const link = document.createElement('a');
-          link.href = result.url;
-          link.textContent = result.title;
-          searchResults.appendChild(link);
-        });
-      }
-
-      searchResults.classList.add('active');
-    }
-
-    searchButton.addEventListener('click', () => {
-      performSearch(searchInput.value);
-    });
-
-    searchInput.addEventListener('keyup', (e) => {
-      if (e.key === 'Enter') {
-        performSearch(searchInput.value);
-      } else {
-        performSearch(searchInput.value);
-      }
-    });
-
-    // Close search results when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!e.target.closest('.search-container')) {
-        searchResults.classList.remove('active');
-      }
     });
   });
 </script>

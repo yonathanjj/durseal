@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /wp-admin/      # Common admin path if you ever use WordPress
+Disallow: /wp-login.php   # Common WordPress login
+Disallow: /cgi-bin/       # Common vulnerable directory
+Disallow: /includes/      # If you have server-side includes
+Disallow: /config/        # If you have configuration files
+Sitemap: https://durasealltd.com/sitemap.xml

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consent Preferences | Duraseal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Same base styles as terms.html */
+        :root {
+            --primary-color: #010B13;
+            --secondary-color: #ffcc00;
+            --text-color: #333;
+            --light-gray: #f5f5f5;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: white;
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        .legal-header {
+            background-color: var(--light-gray);
+            padding: 60px 0 40px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .legal-container {
+            max-width: 900px;
+            margin: 0 auto 60px;
+            padding: 0 30px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin: 50px 0 20px;
+            font-size: 1.8rem;
+            font-weight: 500;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light-gray);
+        }
+
+        h3 {
+            color: var(--primary-color);
+            margin: 30px 0 15px;
+            font-size: 1.3rem;
+        }
+
+        p, li {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .consent-panel {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .consent-category {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .consent-category:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .category-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .category-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--secondary-color);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(30px);
+        }
+
+        .category-description {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #001a33;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .essential-note {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div data-include="nav.html"></div>
+
+    <div class="legal-header">
+        <div class="legal-container">
+            <h1>Consent Preferences</h1>
+            <p class="last-updated">Last updated: may 4, 2025</p>
+        </div>
+    </div>
+
+    <div class="legal-container">
+        <section>
+            <h2>Your Privacy Choices</h2>
+            <p>At Duraseal Ltd, we respect your right to privacy and your right to control how your personal data is used. This page allows you to manage your consent preferences for data collection and cookies on our website.</p>
+
+            <div class="highlight-box">
+                <p>Please note that some cookies are essential for the website to function and cannot be disabled. Your current preferences are indicated below. You can change these settings at any time.</p>
+            </div>
+        </section>
+
+        <div class="consent-panel">
+            <div class="consent-category">
+                <div class="category-header">
+                    <div class="category-title">Essential Cookies</div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" checked disabled>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <p class="category-description">These cookies are necessary for the website to function and cannot be switched off. They are usually only set in response to actions made by you such as setting your privacy preferences, logging in, or filling in forms.</p>
+                <p class="essential-note">Essential cookies cannot be disabled as they are required for core website functionality.</p>
+            </div>
+
+            <div class="consent-category">
+                <div class="category-header">
+                    <div class="category-title">Performance Cookies</div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="performance-cookies" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <p class="category-description">These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us know which pages are the most and least popular and see how visitors move around the site.</p>
+            </div>
+
+            <div class="consent-category">
+                <div class="category-header">
+                    <div class="category-title">Functional Cookies</div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="functional-cookies" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <p class="category-description">These cookies enable the website to provide enhanced functionality and personalization. They may be set by us or by third-party providers whose services we have added to our pages.</p>
+            </div>
+
+            <div class="consent-category">
+                <div class="category-header">
+                    <div class="category-title">Marketing Cookies</div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="marketing-cookies">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <p class="category-description">These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant ads on other sites.</p>
+            </div>
+
+            <div class="btn-container">
+                <button class="btn" id="save-preferences">Save Preferences</button>
+            </div>
+        </div>
+
+        <section>
+            <h2>More Information</h2>
+            <p>For more detailed information about the cookies we use and how we process your personal data, please see our:</p>
+            <ul>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="cookies.html">Cookies Policy</a></li>
+                <li><a href="terms.html">Terms and Conditions</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Contact Us</h2>
+            <p>If you have any questions about your privacy or how we handle your data, please contact our Data Protection Officer:</p>
+            <address>
+                Duraseal Ltd<br>
+                KN 456 Ave, Kigali Heights<br>
+                Kigali, Rwanda<br>
+                Email: privacy@durasealltd.com<br>
+                Phone: +250 7888 12345
+            </address>
+        </section>
+    </div>
+
+<script src="assets/js/loadcomponents.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load navbar and footer
+            const includes = document.querySelectorAll('[data-include]');
+            includes.forEach(include => {
+                fetch(include.getAttribute('data-include'))
+                    .then(response => response.text())
+                    .then(data => {
+                        include.innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error('Error loading included file:', error);
+                    });
+            });
+
+            // Consent preferences functionality
+            const saveBtn = document.getElementById('save-preferences');
+
+            if (saveBtn) {
+                saveBtn.addEventListener('click', function() {
+                    // Get current preferences
+                    const performance = document.getElementById('performance-cookies').checked;
+                    const functional = document.getElementById('functional-cookies').checked;
+                    const marketing = document.getElementById('marketing-cookies').checked;
+
+                    // In a real implementation, you would save these to cookies/localStorage
+                    // For this example, we'll just show a confirmation
+
+                    // Create cookie with preferences (simplified example)
+                    const expiryDate = new Date();
+                    expiryDate.setFullYear(expiryDate.getFullYear() + 1);
+
+                    document.cookie = `performance_cookies=${performance}; expires=${expiryDate.toUTCString()}; path=/`;
+                    document.cookie = `functional_cookies=${functional}; expires=${expiryDate.toUTCString()}; path=/`;
+                    document.cookie = `marketing_cookies=${marketing}; expires=${expiryDate.toUTCString()}; path=/`;
+
+                    // Show confirmation
+                    alert('Your preferences have been saved successfully.');
+
+                    // In a real implementation, you might also need to update the cookie scripts
+                    // that are running on your website based on these preferences
+                });
+            }
+
+            // Load saved preferences (simplified example)
+            function getCookie(name) {
+                const value = `; ${document.cookie}`;
+                const parts = value.split(`; ${name}=`);
+                if (parts.length === 2) return parts.pop().split(';').shift();
+            }
+
+            // Set initial toggle states based on cookies
+            const performancePref = getCookie('performance_cookies');
+            const functionalPref = getCookie('functional_cookies');
+            const marketingPref = getCookie('marketing_cookies');
+
+            if (performancePref !== undefined) {
+                document.getElementById('performance-cookies').checked = performancePref === 'true';
+            }
+
+            if (functionalPref !== undefined) {
+                document.getElementById('functional-cookies').checked = functionalPref === 'true';
+            }
+
+            if (marketingPref !== undefined) {
+                document.getElementById('marketing-cookies').checked = marketingPref === 'true';
+            }
+        });
+    </script>
+</body>
+</html>

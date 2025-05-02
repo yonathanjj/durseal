@@ -250,8 +250,7 @@ body {
     background-color: white;
     margin: 5vh auto;
     padding: 30px;
-    width: 85%;
-    max-width: 900px;
+    width: 70%;
     border-radius: var(--radius);
     position: relative;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
