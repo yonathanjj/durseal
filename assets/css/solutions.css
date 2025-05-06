@@ -11,8 +11,9 @@
     --text-light: #6c757d;
     --transition: all 0.3s ease;
     --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
-    --radius: 5px;
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.2);
+    --radius: 8px;
+    --card-gradient: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
 }
 
 /* Base Styles */
@@ -30,9 +31,10 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
-    margin-top:5rem;
+    padding: 0 15px;
 }
 
 /* Hero Section */
@@ -41,6 +43,10 @@ body {
     color: white;
     padding: 100px 0;
     text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/img/construction-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-top:3rem;
 }
 
 .solutions-hero h1 {
@@ -69,164 +75,215 @@ body {
 
 .hero-button:hover {
     background: var(--secondary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Solutions Section */
-.solutions-section {
+/* Enhanced Partners Section */
+.partners-section {
     padding: 80px 0;
     background-color: #f9f9f9;
 }
 
-.solutions-section h2 {
+.partners-section h2 {
     text-align: center;
     color: var(--primary);
     margin-bottom: 15px;
-    font-size: 2rem;
+    font-size: 2.2rem;
+    font-weight: 700;
 }
 
 .section-description {
     text-align: center;
     color: var(--text-light);
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 1.05rem;
 }
 
-.solutions-filter {
+.partners-grid {
     display: flex;
-    gap: 10px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.filter-btn {
-    padding: 8px 20px;
-    background-color: #e0e0e0;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: var(--transition);
-    font-size: 0.95rem;
-}
-
-.filter-btn.active {
-    background-color: var(--primary);
-    color: white;
-}
-
-.solutions-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.solution-card {
+/* Enhanced Partner Cards */
+.partner-card {
     background: white;
-    border-radius: 10px;
+    border-radius: var(--radius);
     overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-}
-
-.solution-card:hover {
-    transform: translateY(-10px);
     box-shadow: var(--shadow-lg);
-}
-
-.solution-image {
-    height: 200px;
-    overflow: hidden;
-    position: relative; /* Needed for proper image containment */
-    display: flex; /* Enables perfect centering */
-    align-items: center; /* Vertical center */
-    justify-content: center; /* Horizontal center */
-    background: #f5f5f7; /* Fallback color while images load */
-}
-
-.solution-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Changed from 'cover' to show full image */
     transition: var(--transition);
-    object-position: center; /* Ensures image stays centered */
+    display: flex;
+    flex-direction: column;
+    min-height: 500px; /* Increased card height */
+    position: relative;
+    border: none;
 }
 
-/* For images you specifically want to fill the space (like product shots) */
-.solution-card[data-category="products"] .solution-image img,
-.solution-card[data-category="construction"] .solution-image img {
-    object-fit: cover; /* Will fill the space but may crop */
+.partner-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--primary);
 }
 
-/* For problematic images (buckets/packaging) */
-.solution-card[data-category="buckets"] .solution-image img,
-.solution-card[data-category="packaging"] .solution-image img {
-    object-fit: scale-down; /* Smart scaling - shows full image */
-    width: auto; /* Lets image determine its own width */
-    max-width: 90%; /* Prevents touching edges */
-    height: auto; /* Lets image determine its own height */
-    max-height: 90%; /* Prevents touching edges */
+.partner-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-.solution-card:hover .solution-image img {
+.partner-logo {
+    height: 200px; /* Increased logo section height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background: var(--card-gradient);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.partner-logo::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.03);
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.partner-logo img {
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.partner-card:hover .partner-logo img {
     transform: scale(1.05);
 }
 
-.solution-content {
-    padding: 20px;
+.partner-content {
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-.solution-content h3 {
-    margin: 0 0 10px;
+.partner-content h3 {
+    margin: 0 0 15px;
     color: var(--primary);
+    font-size: 1.8rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
 }
 
-.solution-content p {
-    color: var(--text-light);
+.partner-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--secondary);
+}
+
+.partner-meta {
+    display: flex;
+    gap: 20px;
     margin-bottom: 20px;
     font-size: 0.95rem;
+    color: var(--text-light);
 }
 
-.solution-actions {
+.partner-meta span {
     display: flex;
-    gap: 10px;
+    align-items: center;
+    gap: 8px;
 }
 
-.details-btn, .download-btn {
-    padding: 8px 15px;
-    border-radius: var(--radius);
-    font-size: 0.9rem;
-    text-decoration: none;
+.partner-meta i {
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.partner-description {
+    color: var(--text-light);
+    margin-bottom: 25px;
+    font-size: 1rem;
+    flex: 1;
+    line-height: 1.7;
+}
+
+.partner-specialties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.specialty {
+    background-color: rgba(44, 54, 145, 0.1);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--primary);
+    font-weight: 500;
     transition: var(--transition);
 }
 
-.details-btn {
+.partner-card:hover .specialty {
+    background-color: rgba(44, 54, 145, 0.15);
+}
+
+.explore-btn {
+    padding: 15px 25px;
     background-color: var(--primary);
     color: white;
-    flex: 1;
-    text-align: center;
-}
-
-.details-btn:hover {
-    background-color: var(--primary-dark);
-}
-
-.download-btn {
-    background-color: var(--secondary);
-    color: var(--dark);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+    margin-top: auto;
+    width: 100%;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
     display: flex;
     align-items: center;
-    gap: 5px;
+    justify-content: center;
+    gap: 10px;
 }
 
-.download-btn:hover {
-    background-color: var(--secondary-dark);
+.explore-btn i {
+    transition: transform 0.3s ease;
 }
 
+.explore-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(44, 54, 145, 0.2);
+}
 
+.explore-btn:hover i {
+    transform: translateX(3px);
+}
 
-/* Modal Styles - Complete Version */
+/* Products Modal */
 .modal {
     display: none;
     position: fixed;
@@ -250,7 +307,8 @@ body {
     background-color: white;
     margin: 5vh auto;
     padding: 30px;
-    width: 70%;
+    width: 85%;
+    max-width: 1200px;
     border-radius: var(--radius);
     position: relative;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
@@ -274,7 +332,148 @@ body {
     color: var(--primary);
 }
 
-/* Modal Image Container */
+.modal-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-header .partner-logo {
+    height: 80px;
+    width: 80px;
+    min-width: 80px;
+    padding: 10px;
+    background: #f5f5f7;
+    border-radius: 50%;
+    border: 1px solid #eee;
+}
+
+.modal-header .partner-logo img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.modal-header h2 {
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.modal-header p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.products-filter {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.products-filter .filter-btn {
+    padding: 8px 20px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.95rem;
+}
+
+.products-filter .filter-btn.active {
+    background-color: var(--primary);
+    color: white;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 1px solid #eee;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.product-card-image {
+    height: 180px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f7;
+}
+
+.product-card-image img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    transition: var(--transition);
+}
+
+.product-card:hover .product-card-image img {
+    transform: scale(1.05);
+}
+
+.product-card-content {
+    padding: 20px;
+}
+
+.product-card-content h3 {
+    margin: 0 0 10px;
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.product-card-content p {
+    color: var(--text-light);
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    min-height: 60px;
+}
+
+.product-card-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.product-details-btn {
+    padding: 8px 15px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    flex: 1;
+    text-align: center;
+}
+
+.product-details-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Product Detail Modal */
+#productModal .modal-content {
+    width: 70%;
+    max-width: 900px;
+}
+
 .modal-image-container {
     height: 350px;
     max-height: 40vh;
@@ -297,7 +496,6 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* Modal Specifications */
 .modal-specs {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -331,7 +529,6 @@ body {
     color: var(--text-light);
 }
 
-/* Modal Details Sections */
 .modal-details {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -354,7 +551,6 @@ body {
     font-size: 1.1rem;
 }
 
-/* Modal Cards Container */
 .modal-cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -408,7 +604,6 @@ body {
     line-height: 1.5;
 }
 
-/* Modal Description */
 .modal-description {
     margin: 20px 0;
 }
@@ -425,7 +620,6 @@ body {
     color: var(--text-light);
 }
 
-/* Modal Actions */
 .modal-actions {
     display: flex;
     gap: 15px;
@@ -479,11 +673,29 @@ body {
     }
 }
 
+@media (max-width: 992px) {
+    .partner-card {
+        flex-direction: row;
+        min-height: 400px;
+    }
+
+    .partner-logo {
+        width: 250px;
+        height: auto;
+        border-right: 1px solid rgba(0, 0, 0, 0.05);
+        border-bottom: none;
+    }
+}
+
 @media (max-width: 768px) {
     .modal-content {
         padding: 25px;
         margin: 10vh auto;
         width: 92%;
+    }
+
+    #productModal .modal-content {
+        width: 90%;
     }
 
     .modal-image-container {
@@ -495,12 +707,24 @@ body {
         flex-direction: column;
     }
 
-    .modal-specs {
-        grid-template-columns: 1fr 1fr;
+    .partner-card {
+        flex-direction: column;
+        min-height: 500px;
+    }
+
+    .partner-logo {
+        width: auto;
+        height: 200px;
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }
 }
 
 @media (max-width: 576px) {
+    .solutions-hero h1 {
+        font-size: 2rem;
+    }
+
     .modal-content {
         padding: 20px;
         margin: 12vh auto;
@@ -532,5 +756,17 @@ body {
     .modal-btn {
         padding: 8px 15px;
         font-size: 0.9rem;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .partner-logo {
+        height: 180px;
     }
 }
