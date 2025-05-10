@@ -28,233 +28,274 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-   document.addEventListener('DOMContentLoaded', function() {
-       // Featured products data
-       const featuredProducts = {
-           'dr-fixit-raincoat': {
-               title: 'Dr. Fixit Raincoat 2 in 1',
-               category: 'Waterproofing',
-               image: 'assets/img/Dr.%20Fixit%20Raincoat%202%20in%201.jpg',
-               description: 'High performance self priming, fibre reinforced & heat insulating acrylic waterproof coating for roof & external wall.',
-               applications: 'Roofs, external walls, terraces',
-               features: 'Self-priming, fiber reinforced, heat insulating',
-               size: '4 & 20 ltr',
-               coverage: '7.5 to 9 sqmtr per ltr (Dilution 50%)',
-               dryingTime: '4-6 hours between coats',
-               benefits: [
-                   'Tough and elastic film with 120% elongation',
-                   'Bridges cracks up to 2 mm width',
-                   'UV stable and foot trafficable'
-               ],
-               techFeatures: [
-                   'Solid content: 55%',
-                   'Tensile strength: 2.5 N/mm²',
-                   'Elongation at break: 120%'
-               ],
-               applicationSteps: [
-                   'Clean and prepare the surface',
-                   'Apply first coat (diluted 50% with water)',
-                   'Apply second coat after 4-6 hours',
-                   'Allow 24 hours before exposure to water'
-               ],
-               techSheet: 'assets/pdf/Dr.%20Fixit%20Raincoat%202%20in%201%20TDS.pdf',
-               safetySheet: 'assets/pdf/Dr.%20Fixit%20Raincoat%202%20in%201%20SDS.pdf'
-           },
-           'dr-fixit-fastflex': {
-               title: 'Dr. Fixit Fastflex',
-               category: 'Protective Coatings',
-               image: 'assets/img/Dr.%20Fixit%20Fastflex.jpg',
-               description: 'High performance polymer modified cementitious coating. Low VOC & food grade.',
-               applications: 'Water tanks, swimming pools, food processing areas',
-               features: 'Polymer modified, low VOC, food grade',
-               size: '12 kg & 48 kg',
-               coverage: '0.5 – 0.55 sq.mtr in 2 coats at 1.2 – 1.5 mm DFT',
-               dryingTime: '24 hours between coats',
-               benefits: [
-                   'Excellent waterproofing with up to 2mm crack bridging',
-                   'Forms high elastic film with 120% elongation',
-                   'Withstands 10 m hydrostatic pressure'
-               ],
-               techFeatures: [
-                   'Compressive strength: 25 N/mm²',
-                   'Adhesion strength: 1.5 N/mm²',
-                   'Water absorption: <3%'
-               ],
-               applicationSteps: [
-                   'Prepare the substrate by cleaning and dampening',
-                   'Mix with clean water as per instructions',
-                   'Apply first coat with brush or roller',
-                   'Apply second coat after 24 hours'
-               ],
-               techSheet: 'assets/pdf/dr-fixit-fastflex-TDS.pdf',
-               safetySheet: 'assets/pdf/dr-fixit-fastflex-SDS.pdf'
-           },
-           'dr-fixit-marble-tile': {
-               title: 'Dr. Fixit Marble Tile Adhesive',
-               category: 'Waterproofing',
-               image: 'assets/img/Dr.%20Fixit%20Marble%20Tile%20Adhesive.jpg',
-               description: 'Crack Resistant and Waterproof tile Adhesive for marble.',
-               applications: 'Marble flooring, wall cladding, wet areas',
-               features: 'Crack resistant, waterproof, high adhesion',
-               size: '25 kg',
-               coverage: '5.5 to 6 sq. mt. from 25kg bag for 3mm thick bed',
-               dryingTime: '24 hours for light traffic, 72 hours full cure',
-               benefits: [
-                   'Excellent waterproofing characteristics',
-                   'High adhesion with concrete surface',
-                   'Extreme whiteness, does not stain marble'
-               ],
-               techFeatures: [
-                   'Open time: 20 minutes',
-                   'Adjustment time: 15 minutes',
-                   'Compressive strength: 25 N/mm²'
-               ],
-               applicationSteps: [
-                   'Prepare the substrate to be clean and sound',
-                   'Mix adhesive with water to smooth consistency',
-                   'Apply adhesive with notched trowel',
-                   'Fix tiles and adjust within working time'
-               ],
-               techSheet: 'assets/pdf/DR.%20FIXIT%20Marble%20Tile%20Adhesive%20-%20TDS.pdf',
-               safetySheet: 'assets/pdf/DR.%20FIXIT%20Marble%20Tile%20Adhesive%20-%20SDS.pdf'
-           },
-           'dr-fixit-modern-tile': {
-               title: 'Dr. Fixit Modern Tile Adhesive Plus',
-               category: 'Construction Materials',
-               image: 'assets/img/Dr.%20Fixit%20Modern%20Tile%20Adhesive%20Plus.jpg',
-               description: 'Crack Resistant and Waterproof tile Adhesive for Porcelain tiles.',
-               applications: 'Porcelain tiles, large format tiles, exterior applications',
-               features: 'High strength, non-sag, waterproof',
-               size: '25 kg',
-               coverage: '5.5 to 6 sq. mt. from 25kg bag for 3mm thick bed',
-               dryingTime: '24 hours for light traffic, 7 days full strength',
-               benefits: [
-                   'Suitable for tile-on-tile applications',
-                   'Excellent for exterior grade applications',
-                   'Strong bond for large format tiles'
-               ],
-               techFeatures: [
-                   'Open time: 30 minutes',
-                   'Adjustment time: 20 minutes',
-                   'Shear adhesion strength: 1.5 N/mm²'
-               ],
-               applicationSteps: [
-                   'Ensure substrate is clean and structurally sound',
-                   'Mix adhesive to smooth, lump-free consistency',
-                   'Apply with notched trowel at recommended thickness',
-                   'Press tiles firmly into place'
-               ],
-               techSheet: 'assets/pdf/Dr.%20Fixit%20Modern%20Tile%20Adhesive%20Plus.pdf',
-               safetySheet: 'assets/pdf/Dr.%20Fixit%20Modern%20Tile%20Adhesive%20Plus_SDS.pdf'
-           }
-       };
+// Solutions products data with added PDF links
+const solutionsProducts = {
+    'dr-fixit-waterproof-plus': {
+        title: 'Dr. Fixit',
+        category: 'Waterproofing',
+        image: 'assets/img/PowderWaterproof.png',
+        description: 'Integral Powder Waterproofing Compound for Plaster & Concrete.',
+        applications: 'Roofs, walls, basements',
+        features: 'Flexible, crack-bridging, UV resistant',
+        size: '500g',
+        coverage: '500 gm of Dr. Fixit Powder Waterproof for 50 kg bag of cement',
+        benefits: [
+                                'Chloride-free hence no chances of corrosion of reinforcement bars.',
+                                'As an effective pore filler, helps to fill capillaries and pores to prevent water seepage.',
+                                'Makes the mix cohesive and denser, hence the concrete & plaster has reduced permeability.'
+                            ],
+                            techFeatures: [
+                                'Polymer content: 65%',
+                                'Elongation: 300%',
+                                'Tensile strength: 2.5 N/mm²'
+                            ],
+                            applicationSteps: [
+                                'Clean surface',
+                                'Apply primer',
+                                'First coat application'
+                            ],
+        techSheet: 'assets/pdf/PowderWaterproof1.pdf',
+        safetySheet: 'assets/pdf/PowderWaterproof2.pdf',
+        contactLink: 'contact.html'
+    },
+    // PRODUCT 2
+                    'dr-fixit-concrete-repair': {
+                        title: 'Dr. Fixit Polyplus CP Admix',
+                        category: 'Waterproofing',
+                        image: 'assets/img/PolyplusCP.png',
+                        description: 'New generation integral crystalline waterproofing admixture',
+                        applications: 'Columns, beams, slabs',
+                        features: 'Fast-setting, high-strength',
+                        size: '10kg, 25kg',
+                        coverage: '2.0 sqm/kg',
+                        benefits: [
+                            'Resists extremely high hydrostatic pressure up to 153 meter / 15 Bar.',
+                            'Can self-heal crack up to 0.5mm in presence of moisture.',
+                            'Reduces Co-efficient of water permeability by more than 90%.'
+                        ],
+                        techFeatures: [
+                            'Can self-heal crack up to 0.5mm in presence of moisture.',
+                            'Setting time: 15 minutes',
+                            'Adhesion: 2.0 N/mm²'
+                        ],
+                        applicationSteps: [
+                            'Prepare damaged area',
+                            'Wet surface',
+                            'Mix compound',
+                            'Apply and finish'
+                        ],
+            techSheet: 'assets/pdf/PolyplusCPAdmix1.pdf',
+            safetySheet: 'assets/pdf/PolyplusCPAdmix2.pdf',
+            contactLink: '/contact?product=Dr.%20Fixit%20Raincoat%202%20in%201'
+        },
+        // PRODUCT 3
+                        'dr-fixit-tile-grout': {
+                            title: 'Dr. Fixit Pidiproof LW+',
+                            category: 'Waterproofing',
+                            image: 'assets/img/PidiproofLW+.png',
+                            description: 'Integral liquid waterproofing compound for concrete & plaster to reduce dampness.',
+                            applications: 'Floor tiles, wall tiles',
+                            features: 'Colorfast, mold resistant',
+                            size: '2kg, 5kg, 10kg',
+                            coverage: '5 sqm/kg',
+                            benefits: [
+                                'Reduces dampness by improving waterproofing of concrete/ plaster.',
+                                'Resists corrosion of steel.',
+                                'No separation cracks in brick mortar.'
+                            ],
+                            techFeatures: [
+                                'Shrinkage: <0.1%',
+                                'Water absorption: <5%',
+                                'Abrasion resistance: >500 cycles'
+                            ],
+                            applicationSteps: [
+                                'Prepare joints',
+                                'Mix powder',
+                                'Apply grout',
+                                'Clean excess'
+                            ],
+                techSheet: 'assets/pdf/PidiproofLW+1.pdf',
+                safetySheet: 'assets/pdf/PidiproofLW+2.pdf',
+                contactLink: 'contact.html'
+            },
+            // PRODUCT 4
+            'Dr. Fixit Polyplus CP': {
+                                title: 'Dr. Fixit Polyplus CP',
+                                category: 'Primer',
+                                image: 'assets/img/CrystallinePolyplus.png',
+                                description: 'Cementitious crystalline waterproof coating for concrete.',
+                                applications: 'Concrete, plaster, masonry',
+                                features: 'Deep penetration, alkali resistant',
+                                size: '1L, 5L, 20L',
+                                coverage: '10 sqm/L',
+                                benefits: [
+                                    'Application advantage: can be applied to both positive and negative side of concrete.',
+                                    'Used as a dry shake or coating, once penetration is complete remains permanently active.',
+                                    'Treated concrete withstands hydrostatic water pressure up to 15 metre head.'
+                                ],
+                                techFeatures: [
+                                    'Solids content: 12%',
+                                    'PH: 8.5',
+                                    'Density: 1.05 g/cm³'
+                                ],
+                                applicationSteps: [
+                                    'Clean surface',
+                                    'Dilute if needed',
+                                    'Apply evenly',
+                                    'Let dry completely'
+                                ],
+                            techSheet: 'assets/pdf/POLYPLUSCP1.pdf',
+                            safetySheet: 'assets/pdf/POLYPLUSCP2.pdf',
+                            contactLink: 'contact.html'
+                        }
 
-       // DOM Elements
-       const featuredModal = document.getElementById('featuredModal');
-       const featuredFilterButtons = document.querySelectorAll('.featured-filter-btn');
-       const featuredCards = document.querySelectorAll('.featured-card');
-       const featuredCloseBtn = document.querySelector('.featured-close-btn');
+    // ... (other products with same structure)
+};
 
-       // Filter functionality
-       featuredFilterButtons.forEach(button => {
-           button.addEventListener('click', () => {
-               // Update active button
-               featuredFilterButtons.forEach(btn => btn.classList.remove('active'));
-               button.classList.add('active');
+// DOM Elements
+const solutionsModal = document.getElementById('solutionsModal');
+const solutionsFilterButtons = document.querySelectorAll('.solutions-filter-btn');
+const solutionCards = document.querySelectorAll('.solution-card');
+const solutionsCloseBtn = document.querySelector('.solutions-close-btn');
 
-               const filter = button.dataset.filter;
+// Filter functionality
+solutionsFilterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Update active button
+        solutionsFilterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
 
-               // Filter cards
-               featuredCards.forEach(card => {
-                   const category = card.dataset.category;
-                   if (filter === 'all' || category === filter) {
-                       card.style.display = 'block';
-                   } else {
-                       card.style.display = 'none';
-                   }
-               });
-           });
-       });
+        const filter = button.dataset.filter;
 
-       // Add click event to all detail buttons
-       document.querySelectorAll('.featured-details-btn').forEach(button => {
-           button.addEventListener('click', function() {
-               const card = this.closest('.featured-card');
-               const productId = card.dataset.id;
-               showFeaturedProduct(featuredProducts[productId]);
-           });
-       });
+        // Filter cards
+        solutionCards.forEach(card => {
+            const category = card.dataset.category;
+            if (filter === 'all' || category === filter) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
 
-       // Show product detail modal
-       function showFeaturedProduct(product) {
-           // Populate modal
-           document.getElementById('featuredProductImage').src = product.image;
-           document.getElementById('featuredProductImage').alt = product.title;
-           document.getElementById('featuredProductTitle').textContent = product.title;
-           document.getElementById('featuredProductCategory').textContent = product.category;
-           document.getElementById('featuredProductDescription').textContent = product.description;
-           document.getElementById('featuredProductApplications').textContent = product.applications;
-           document.getElementById('featuredProductFeatures').textContent = product.features;
-           document.getElementById('featuredProductSize').textContent = product.size;
-           document.getElementById('featuredProductCoverage').textContent = product.coverage;
-           document.getElementById('featuredProductDryingTime').textContent = product.dryingTime;
+// Add click event to all detail buttons
+document.querySelectorAll('.solution-details-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const card = this.closest('.solution-card');
+        const productId = card.dataset.id;
+        showSolutionProduct(solutionsProducts[productId]);
+    });
+});
 
-           // Populate benefits
-           const benefitsList = document.getElementById('featuredProductBenefits');
-           benefitsList.innerHTML = '';
-           product.benefits.forEach(benefit => {
-               const li = document.createElement('li');
-               li.textContent = benefit;
-               benefitsList.appendChild(li);
-           });
+// Show product detail modal with card-style content and 3 buttons
+function showSolutionProduct(product) {
+    // Populate basic info
+    document.getElementById('solutionProductImage').src = product.image;
+    document.getElementById('solutionProductImage').alt = product.title;
+    document.getElementById('solutionProductTitle').textContent = product.title;
+    document.getElementById('solutionProductCategory').textContent = product.category;
+    document.getElementById('solutionProductDescription').textContent = product.description;
 
-           // Populate technical features
-           const techFeaturesList = document.getElementById('featuredProductTechFeatures');
-           techFeaturesList.innerHTML = '';
-           product.techFeatures.forEach(feature => {
-               const li = document.createElement('li');
-               li.textContent = feature;
-               techFeaturesList.appendChild(li);
-           });
+    // Populate specs
+    document.getElementById('solutionProductApplications').textContent = product.applications;
+    document.getElementById('solutionProductFeatures').textContent = product.features;
+    document.getElementById('solutionProductSize').textContent = product.size;
+    document.getElementById('solutionProductCoverage').textContent = product.coverage;
 
-           // Populate application steps
-           const applicationStepsList = document.getElementById('featuredProductApplicationSteps');
-           applicationStepsList.innerHTML = '';
-           product.applicationSteps.forEach(step => {
-               const li = document.createElement('li');
-               li.textContent = step;
-               applicationStepsList.appendChild(li);
-           });
+    // Create card-style content for benefits
+    const benefitsCard = document.createElement('div');
+    benefitsCard.className = 'modal-card';
+    benefitsCard.innerHTML = `
+        <div class="modal-card-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h4>Benefits</h4>
+        <ul class="benefits-list"></ul>
+    `;
+    const benefitsList = benefitsCard.querySelector('.benefits-list');
+    product.benefits.forEach(benefit => {
+        const li = document.createElement('li');
+        li.textContent = benefit;
+        benefitsList.appendChild(li);
+    });
 
-           // Set PDF download links
-           document.getElementById('featuredProductTechSheetBtn').href = product.techSheet;
-           document.getElementById('featuredProductTechSheetBtn').download = product.title.replace(/\s+/g, '_') + '_Technical_Sheet.pdf';
-           if (product.safetySheet) {
-               document.getElementById('featuredProductSafetySheetBtn').href = product.safetySheet;
-               document.getElementById('featuredProductSafetySheetBtn').download = product.title.replace(/\s+/g, '_') + '_Safety_Data.pdf';
-           } else {
-               document.getElementById('featuredProductSafetySheetBtn').style.display = 'none';
-           }
+    // Create card-style content for technical features
+    const techFeaturesCard = document.createElement('div');
+    techFeaturesCard.className = 'modal-card';
+    techFeaturesCard.innerHTML = `
+        <div class="modal-card-icon">
+            <i class="fas fa-cogs"></i>
+        </div>
+        <h4>Technical Features</h4>
+        <ul class="tech-features-list"></ul>
+    `;
+    const techFeaturesList = techFeaturesCard.querySelector('.tech-features-list');
+    product.techFeatures.forEach(feature => {
+        const li = document.createElement('li');
+        li.textContent = feature;
+        techFeaturesList.appendChild(li);
+    });
 
-           // Show modal
-           featuredModal.classList.add('show');
-           document.body.style.overflow = 'hidden';
-       }
+    // Create card-style content for application steps
+    const applicationStepsCard = document.createElement('div');
+    applicationStepsCard.className = 'modal-card';
+    applicationStepsCard.innerHTML = `
+        <div class="modal-card-icon">
+            <i class="fas fa-list-ol"></i>
+        </div>
+        <h4>Application Steps</h4>
+        <ol class="application-steps-list"></ol>
+    `;
+    const applicationStepsList = applicationStepsCard.querySelector('.application-steps-list');
+    product.applicationSteps.forEach(step => {
+        const li = document.createElement('li');
+        li.textContent = step;
+        applicationStepsList.appendChild(li);
+    });
 
-       // Close modal
-       featuredCloseBtn.addEventListener('click', () => {
-           featuredModal.classList.remove('show');
-           document.body.style.overflow = 'auto';
-       });
+    // Clear existing cards and append new ones
+    const cardsContainer = document.getElementById('solutionCardsContainer');
+    cardsContainer.innerHTML = '';
+    cardsContainer.appendChild(benefitsCard);
+    cardsContainer.appendChild(techFeaturesCard);
+    cardsContainer.appendChild(applicationStepsCard);
 
-       // Close modal when clicking outside
-       window.addEventListener('click', (e) => {
-           if (e.target === featuredModal) {
-               featuredModal.classList.remove('show');
-               document.body.style.overflow = 'auto';
-           }
-       });
-   });
+    // Set up the 3 buttons
+    const techSheetBtn = document.getElementById('solutionTechSheetBtn');
+    techSheetBtn.href = product.techSheet;
+    techSheetBtn.download = `${product.title.replace(/\s+/g, '_')}_Technical_Sheet.pdf`;
+
+    const safetySheetBtn = document.getElementById('solutionSafetySheetBtn');
+    if (product.safetySheet) {
+        safetySheetBtn.href = product.safetySheet;
+        safetySheetBtn.download = `${product.title.replace(/\s+/g, '_')}_Safety_Data.pdf`;
+        safetySheetBtn.style.display = 'flex';
+    } else {
+        safetySheetBtn.style.display = 'none';
+    }
+
+    const contactBtn = document.getElementById('solutionContactBtn');
+    contactBtn.href = product.contactLink || '/contact';
+
+    // Show modal
+    solutionsModal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+}
+
+// Close modal
+solutionsCloseBtn.addEventListener('click', () => {
+    solutionsModal.classList.remove('show');
+    document.body.style.overflow = 'auto';
+});
+
+// Close modal when clicking outside
+window.addEventListener('click', (e) => {
+    if (e.target === solutionsModal) {
+        solutionsModal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+    }
+});
 
 
     // Blog Slider

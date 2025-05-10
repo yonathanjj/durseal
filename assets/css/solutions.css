@@ -770,3 +770,30 @@ body {
         height: 180px;
     }
 }
+
+
+
+
+.coming-soon-message {
+    text-align: center;
+    padding: 40px 20px;
+    grid-column: 1 / -1;
+}
+
+.coming-soon-message i {
+    font-size: 3rem;
+    color: #2c3691;
+    margin-bottom: 20px;
+}
+
+.coming-soon-message h3 {
+    color: #2c3691;
+    margin-bottom: 10px;
+}
+
+.coming-soon-message p {
+    color: #666;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
+}

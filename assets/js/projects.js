@@ -23,22 +23,30 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Modal functionality
 function showProjectModal(title, subtitle, description, year, size, location) {
-    const modal = document.getElementById('projectModal');
-    const imgSrc = `https://source.unsplash.com/random/800x500/?${encodeURIComponent(title.split(' ')[0])}`;
+    // Get the clicked project card
+    const clickedCard = event.currentTarget;
 
-    // Set modal content
+    // Find the image inside the clicked card
+    const cardImage = clickedCard.querySelector('.project-image img');
+
+    // Get the modal elements
+    const modal = document.getElementById('projectModal');
+    const modalImage = document.getElementById('modalImage');
+
+    // Set the modal content
     document.getElementById('modalTitle').textContent = title;
     document.getElementById('modalSubtitle').textContent = subtitle;
     document.getElementById('modalDescription').textContent = description;
     document.getElementById('modalYear').textContent = year;
     document.getElementById('modalSize').textContent = size;
     document.getElementById('modalLocation').textContent = location;
-    document.getElementById('modalImage').src = imgSrc;
-    document.getElementById('modalImage').alt = title;
 
-    // Show modal
+    // Use the SAME image as in the project card
+    modalImage.src = cardImage.src;
+    modalImage.alt = cardImage.alt;
+
+    // Show the modal
     modal.classList.add('show');
     document.body.style.overflow = 'hidden';
 }
