@@ -39,9 +39,9 @@
     <!-- Hero Section -->
     <section class="solutions-hero">
         <div class="container">
-            <h1>Partnering with Global Leaders in Construction Solutions</h1>
-            <p class="hero-subtitle">We collaborate with top manufacturers to bring you the best waterproofing and adhesive systems for Rwanda's construction needs</p>
-            <a href="#partners" class="hero-button">View Our Partners</a>
+            <h1>Comprehensive Construction Solutions & Products</h1>
+            <p class="hero-subtitle">We partner with industry leaders to provide complete building solutions tailored for Rwanda's construction challenges</p>
+            <a href="#partners" class="hero-button">Explore Our Partners</a>
         </div>
     </section>
 
@@ -49,7 +49,7 @@
     <section class="partners-section" id="partners">
         <div class="container">
             <h2>Our Trusted Manufacturing Partners</h2>
-            <p class="section-description">Select a partner to explore their product solutions</p>
+            <p class="section-description">Select a partner to explore their comprehensive solutions and product offerings</p>
 
             <div class="partners-grid">
                 <!-- Dr. Fixit Card -->
@@ -68,11 +68,11 @@
                             <span class="specialty">Waterproofing</span>
                             <span class="specialty">Tile Adhesives</span>
                             <span class="specialty">Concrete Repair</span>
+                            <span class="specialty">Protective Coatings</span>
                         </div>
-                        <button class="explore-btn" data-partner="dr-fixit">Explore Products</button>
+                        <button class="explore-btn" data-partner="dr-fixit">Explore Solutions</button>
                     </div>
                 </div>
-
 
                 <!-- Fevicol Card -->
                 <div class="partner-card" id="fevicol">
@@ -91,36 +91,100 @@
                             <span class="specialty">Wood Adhesives</span>
                             <span class="specialty">Sealants</span>
                         </div>
-                        <button class="explore-btn" data-partner="fevicol">Explore Products</button>
+                        <button class="explore-btn" data-partner="fevicol">Explore Solutions</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Products Modal -->
-    <div class="modal" id="productsModal">
+    <!-- Solutions Modal -->
+    <div class="modal" id="solutionsModal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
             <div class="modal-header">
                 <div class="partner-logo">
                     <img id="modalPartnerLogo" src="" alt="Partner Logo">
                 </div>
+
                 <div>
                     <h2 id="modalPartnerName">Partner Name</h2>
                     <p id="modalPartnerDescription">Partner description</p>
                 </div>
             </div>
 
-            <div class="products-filter">
-                <button class="filter-btn active" data-filter="all">All Products</button>
-                <button class="filter-btn" data-filter="waterproofing">Waterproofing</button>
-                <button class="filter-btn" data-filter="adhesives">Adhesives</button>
-                <button class="filter-btn" data-filter="repair">Repair Solutions</button>
+            <div class="solutions-tabs">
+                <button class="tab-btn active" data-tab="solutions">Solutions</button>
+                <button class="tab-btn" data-tab="products">All Products</button>
             </div>
 
-            <div class="products-grid" id="productsGrid">
-                <!-- Products will be loaded here by JavaScript -->
+            <div class="tab-content active" id="solutionsTab">
+                <div class="solutions-grid" id="solutionsGrid">
+                    <!-- Solutions will be loaded here by JavaScript -->
+                </div>
+            </div>
+
+            <div class="tab-content" id="productsTab">
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Solution Detail Modal -->
+    <div class="modal" id="solutionModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-image-container">
+                <img src="" alt="" id="solutionImage">
+            </div>
+            <div class="product-filters-container">
+                <div class="product-filters">
+                    <!-- Filter buttons will be added here by JavaScript -->
+                </div>
+            </div>
+
+            <h2 id="solutionTitle">Solution Title</h2>
+            <h3 id="solutionCategory">Solution Category</h3>
+
+            <div class="modal-description">
+                <h4>Solution Overview</h4>
+                <p id="solutionDescription">Loading detailed description...</p>
+            </div>
+
+            <div class="modal-specs">
+                <div class="spec-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h4>Key Benefits</h4>
+                        <ul id="solutionBenefits">
+                            <!-- Benefits will be added by JS -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="spec-item">
+                    <i class="fas fa-tools"></i>
+                    <div>
+                        <h4>Application Areas</h4>
+                        <ul id="solutionApplications">
+                            <!-- Applications will be added by JS -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="solution-products-section">
+                <h4>Recommended Products</h4>
+                <div class="solution-products-grid" id="solutionProductsGrid">
+                    <!-- Products for this solution will be loaded here -->
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <a href="contact.html" class="modal-btn secondary">
+                    <i class="fas fa-envelope"></i> Contact Our Experts
+                </a>
             </div>
         </div>
     </div>
