@@ -25,9 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         'Parking deck waterproofing'
                     ],
                     products: [
-                        'dr-fixit-waterproof-plus',
-                        'dr-fixit-concrete-repair',
-                        'dr-fixit-tile-grout',
+                        'Dr. Fixit Fastflex',
+                        'Dr. Fixit Torchshield/Insutech/Ecobit',
                         'Dr. Fixit Raincoat 2 in 1'
                     ]
                 },
@@ -101,7 +100,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     ],
                     products: [
                         'Dr. Fixit Polyplus CP Admix',
-                        'Dr. Fixit Fastflex',
                         'Dr. Fixit Piditop 333',
                         'Dr. Fixit Super Latex'
                     ]
@@ -200,7 +198,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         'Plaster protection'
                     ],
                     products: [
-                        'Dr. Fixit Raincoat 2 in 1',
                         'Dr. Fixit Sureseal',
                         'Dr. Fixit Pidiproof LW+',
                         'Dr. Fixit Super Latex'
@@ -225,10 +222,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         'Fountains and water features'
                     ],
                     products: [
-                        'Dr. Fixit Polyplus CP',
-                        'Dr. Fixit Marble Tile Adhesive',
-                        'Dr. Fixit PU Sealant',
-                        'Dr. Fixit Raincoat 2 in 1'
+                        'Dr. Fixit Fastflex',
+                        'Dr. Fixit Marble Tile Adhesive'
                     ]
                 },
                 // SOLUTION 10
@@ -250,7 +245,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         'Wastewater treatment plants'
                     ],
                     products: [
-                        'Dr. Fixit Torchshield/Insutech/Ecobit',
                         'Dr. Fixit Pidifin 2K',
                         'Dr. Fixit Fastflex',
                         'Dr. Fixit Piditop 333'
@@ -306,8 +300,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     description: 'New generation integral crystalline waterproofing admixture',
                     applications: 'Columns, beams, slabs',
                     features: 'Fast-setting, high-strength',
-                    size: '10kg, 25kg',
-                    coverage: '2.0 sqm/kg',
+                    size: '30kg',
+                    coverage: '0.8% - 1% by weight of cement.',
                     benefits: [
                         'Resists extremely high hydrostatic pressure up to 153 meter / 15 Bar.',
                         'Can self-heal crack up to 0.5mm in presence of moisture.',
@@ -334,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     description: 'Integral liquid waterproofing compound for concrete & plaster to reduce dampness.',
                     applications: 'Floor tiles, wall tiles',
                     features: 'Colorfast, mold resistant',
-                    size: '2kg, 5kg, 10kg',
+                    size: ' 200ml , 5L, 1L and 200 mL',
                     coverage: '5 sqm/kg',
                     benefits: [
                         'Reduces dampness by improving waterproofing of concrete/ plaster.',
@@ -432,15 +426,14 @@ document.addEventListener('DOMContentLoaded', function() {
                         'Excellent resistance to ingress of water.'
                     ],
                     techFeatures: [
-                        'Compressive strength: 30 MPa',
-                        'Setting time: 20 minutes',
-                        'Max thickness: 50mm'
+                        'Elongation: 40–50%',
+                        'Water permeability: Nil at 5 bar',
+                        'Adhesion to concrete: >1 MPa'
                     ],
                     applicationSteps: [
-                        'Prepare substrate',
-                        'Mix with water',
-                        'Pour and spread',
-                        'Let cure'
+                        'Shake the liquid component until it becomes a uniform milky color.',
+                        'Use a slow-speed mechanical mixer with a paddle to mix the components.',
+                        'Gradually add the powder into the liquid while stirring to form a lump-free slurry.'
                     ],
                     techSheet: 'assets/pdf/Pidifin2K1.pdf',
                     safetySheet: 'assets/pdf/Pidifin2K2.pdf'
@@ -677,6 +670,33 @@ document.addEventListener('DOMContentLoaded', function() {
                     techSheet: 'assets/pdf/TileAdhesive1.pdf',
                     safetySheet: 'assets/pdf/TileAdhesive2.pdf'
                 },
+                'Dr. Fixit Fastflex': {
+                                    title: 'Dr. Fixit Fastflex',
+                                    category: 'Integral Waterproofing',
+                                    image: 'assets/img/Fastflex.png',
+                                    description: 'High performance polymer modified cementitious coating. Low VOC & food grade.',
+                                    applications: 'Overlays, repairs, new to old concrete',
+                                    features: 'High strength, durable',
+                                    size: '12 kg & 48 kg',
+                                    coverage: 'Approximately 0.5 – 0.55 sq.mtr in 2 coats at 1.2 – 1.5 mm Dry Film Thickness depending upon the level of the surface.',
+                                    benefits: [
+                                        'Excellent waterproofing with up to 2mm crack bridging ability.',
+                                        'Forms high elastic film with 120% elongation which accommodates thermal movements.',
+                                        'Withstands 10 m hydrostatic pressure without any leakages.'
+                                    ],
+                                   techFeatures: [
+                                       'Elongation: 120%',
+                                       'Crack bridging: Up to 2 mm',
+                                       'Water permeability: Nil at 5 bar pressure'
+                                   ],
+                                   applicationSteps: [
+                                       'Clean and wet surface',
+                                       'Mix both components thoroughly',
+                                       'Apply in two coats with brush or roller'
+                                   ],
+                                    techSheet: 'assets/pdf/Fastflex1.pdf',
+                                    safetySheet: 'assets/pdf/Fastflex2.pdf'
+                                },
                 'Dr. Fixit Modern Tile Adhesive Plus': {
                     title: 'Dr. Fixit Modern Tile Adhesive Plus',
                     category: 'Tile Fixing',
@@ -746,365 +766,375 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // DOM Elements
-    const solutionsModal = document.getElementById('solutionsModal');
-    const solutionModal = document.getElementById('solutionModal');
-    const productModal = document.getElementById('productModal');
-    const exploreButtons = document.querySelectorAll('.explore-btn');
-    const closeButtons = document.querySelectorAll('.close-btn');
-    const solutionsGrid = document.getElementById('solutionsGrid');
-    const productsGrid = document.getElementById('productsGrid');
-    const tabButtons = document.querySelectorAll('.tab-btn');
-    const tabContents = document.querySelectorAll('.tab-content');
+        // DOM Elements
+        const solutionsModal = document.getElementById('solutionsModal');
+        const solutionModal = document.getElementById('solutionModal');
+        const productModal = document.getElementById('productModal');
+        const exploreButtons = document.querySelectorAll('.explore-btn');
+        const closeButtons = document.querySelectorAll('.close-btn');
+        const solutionsGrid = document.getElementById('solutionsGrid');
+        const productsGrid = document.getElementById('productsGrid');
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
 
-    // Current partner and tab state
-    let currentPartner = null;
-    let currentCategory = 'All Products';
+        // Current partner and tab state
+        let currentPartner = null;
+        let currentCategory = 'All Products';
 
-    // Open solutions modal for a partner
-    exploreButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            const partnerId = button.dataset.partner;
-            currentPartner = partnersData[partnerId];
+        // Open solutions modal for a partner
+        exploreButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                // Prevent reopening if already open
+                if (solutionsModal.classList.contains('show')) return;
 
-            // Set partner info in modal
-            document.getElementById('modalPartnerLogo').src = currentPartner.logo;
-            document.getElementById('modalPartnerLogo').alt = currentPartner.name + ' Logo';
-            document.getElementById('modalPartnerName').textContent = currentPartner.name;
-            document.getElementById('modalPartnerDescription').textContent = currentPartner.description;
+                const partnerId = button.dataset.partner;
+                currentPartner = partnersData[partnerId];
+                currentCategory = 'All Products'; // Reset category filter
 
-            // Load solutions and products
-            loadSolutions(currentPartner.solutions);
-            loadProducts(currentPartner.products);
+                // Set partner info in modal
+                document.getElementById('modalPartnerLogo').src = currentPartner.logo;
+                document.getElementById('modalPartnerLogo').alt = currentPartner.name + ' Logo';
+                document.getElementById('modalPartnerName').textContent = currentPartner.name;
+                document.getElementById('modalPartnerDescription').textContent = currentPartner.description;
 
-            // Create category filters if they exist
-            if (currentPartner.productCategories && currentPartner.productCategories.length > 0) {
-                createCategoryFilters();
-            }
-
-            // Show modal
-            solutionsModal.classList.add('show');
-            document.body.style.overflow = 'hidden';
-        });
-    });
-
-    // Create category filter buttons
-    function createCategoryFilters() {
-        const filterContainer = document.createElement('div');
-        filterContainer.className = 'product-filters';
-
-        currentPartner.productCategories.forEach(category => {
-            const filterButton = document.createElement('button');
-            filterButton.className = 'filter-btn';
-            filterButton.textContent = category;
-            filterButton.dataset.category = category;
-
-            if (category === 'All Products') {
-                filterButton.classList.add('active');
-            }
-
-            filterButton.addEventListener('click', () => {
-                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-                filterButton.classList.add('active');
-                currentCategory = category;
+                // Load solutions and products
+                loadSolutions(currentPartner.solutions);
                 loadProducts(currentPartner.products);
+
+                // Create category filters if they exist
+                if (currentPartner.productCategories && currentPartner.productCategories.length > 0) {
+                    createCategoryFilters();
+                }
+
+                // Show modal
+                solutionsModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Create category filter buttons
+        function createCategoryFilters() {
+            // First remove any existing filters
+            const existingFilters = document.querySelector('.product-filters');
+            if (existingFilters) {
+                existingFilters.remove();
+            }
+
+            const filterContainer = document.createElement('div');
+            filterContainer.className = 'product-filters';
+
+            currentPartner.productCategories.forEach(category => {
+                const filterButton = document.createElement('button');
+                filterButton.className = 'filter-btn';
+                filterButton.textContent = category;
+                filterButton.dataset.category = category;
+
+                if (category === currentCategory) {
+                    filterButton.classList.add('active');
+                }
+
+                filterButton.addEventListener('click', () => {
+                    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                    filterButton.classList.add('active');
+                    currentCategory = category;
+                    loadProducts(currentPartner.products);
+                });
+
+                filterContainer.appendChild(filterButton);
             });
 
-            filterContainer.appendChild(filterButton);
-        });
-
-        // Insert filter container before products grid
-        const productsTab = document.getElementById('productsTab');
-        if (productsTab.firstChild) {
-            productsTab.insertBefore(filterContainer, productsTab.firstChild);
-        } else {
-            productsTab.appendChild(filterContainer);
-        }
-    }
-
-    // Tab switching
-    tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const tabId = button.dataset.tab;
-
-            // Update active tab button
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-
-            // Show corresponding tab content
-            tabContents.forEach(content => content.classList.remove('active'));
-            document.getElementById(`${tabId}Tab`).classList.add('active');
-        });
-    });
-
-    // Load solutions into grid
-    function loadSolutions(solutions) {
-        solutionsGrid.innerHTML = '';
-
-        if (Object.keys(solutions).length === 0) {
-            solutionsGrid.innerHTML = `
-                <div class="coming-soon-message">
-                    <i class="fas fa-tools"></i>
-                    <h3>Solutions Coming Soon</h3>
-                    <p>We're currently compiling comprehensive solution packages for this partner. Please check back soon or explore our product offerings.</p>
-                </div>
-            `;
-            return;
+            // Insert filter container before products grid
+            const productsTab = document.getElementById('productsTab');
+            if (productsTab.firstChild) {
+                productsTab.insertBefore(filterContainer, productsTab.firstChild);
+            } else {
+                productsTab.appendChild(filterContainer);
+            }
         }
 
-        Object.entries(solutions).forEach(([id, solution]) => {
-            const solutionCard = document.createElement('div');
-            solutionCard.className = 'solution-card';
-            solutionCard.dataset.id = id;
+        // Tab switching
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.dataset.tab;
 
-            solutionCard.innerHTML = `
-                <div class="solution-card-image">
-                    <img src="${solution.image}" alt="${solution.title}">
-                </div>
-                <div class="solution-card-content">
-                    <h3>${solution.title}</h3>
-                    <p>${solution.description.substring(0, 120)}...</p>
-                    <div class="solution-card-actions">
-                        <button class="solution-details-btn">View Solution</button>
+                // Update active tab button
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                // Show corresponding tab content
+                tabContents.forEach(content => content.classList.remove('active'));
+                document.getElementById(`${tabId}Tab`).classList.add('active');
+            });
+        });
+
+        // Load solutions into grid
+        function loadSolutions(solutions) {
+            solutionsGrid.innerHTML = '';
+
+            if (Object.keys(solutions).length === 0) {
+                solutionsGrid.innerHTML = `
+                    <div class="coming-soon-message">
+                        <i class="fas fa-tools"></i>
+                        <h3>Solutions Coming Soon</h3>
+                        <p>We're currently compiling comprehensive solution packages for this partner. Please check back soon or explore our product offerings.</p>
                     </div>
-                </div>
-            `;
+                `;
+                return;
+            }
 
-            solutionCard.querySelector('.solution-details-btn').addEventListener('click', () => {
-                showSolutionDetail(solution);
-            });
+            Object.entries(solutions).forEach(([id, solution]) => {
+                const solutionCard = document.createElement('div');
+                solutionCard.className = 'solution-card';
+                solutionCard.dataset.id = id;
 
-            solutionsGrid.appendChild(solutionCard);
-        });
-    }
-
-    // Load products into grid
-    function loadProducts(products) {
-        productsGrid.innerHTML = '';
-
-        if (Object.keys(products).length === 0) {
-            productsGrid.innerHTML = `
-                <div class="coming-soon-message">
-                    <i class="fas fa-box-open"></i>
-                    <h3>Products Coming Soon</h3>
-                    <p>We're currently compiling the product catalog for this partner. Please check back soon or explore our solution offerings.</p>
-                </div>
-            `;
-            return;
-        }
-
-        let filteredProducts = Object.entries(products);
-
-        // Filter by category if not "All Products"
-        if (currentCategory !== 'All Products') {
-            filteredProducts = filteredProducts.filter(([id, product]) => product.category === currentCategory);
-        }
-
-        if (filteredProducts.length === 0) {
-            productsGrid.innerHTML = `
-                <div class="no-products-message">
-                    <i class="fas fa-info-circle"></i>
-                    <h3>No Products in This Category</h3>
-                    <p>There are currently no products available in the selected category. Please try another category or check back later.</p>
-                </div>
-            `;
-            return;
-        }
-
-        filteredProducts.forEach(([id, product]) => {
-            const productCard = document.createElement('div');
-            productCard.className = 'product-card';
-            productCard.dataset.id = id;
-
-            productCard.innerHTML = `
-                <div class="product-card-image">
-                    <img src="${product.image}" alt="${product.title}">
-                </div>
-                <div class="product-card-content">
-                    <h3>${product.title}</h3>
-                    <p class="product-category">${product.category}</p>
-                    <p>${product.description.substring(0, 100)}...</p>
-                    <div class="product-card-actions">
-                        <button class="product-details-btn">View Details</button>
+                solutionCard.innerHTML = `
+                    <div class="solution-card-image">
+                        <img src="${solution.image}" alt="${solution.title}" loading="lazy">
                     </div>
-                </div>
-            `;
-
-            productCard.querySelector('.product-details-btn').addEventListener('click', () => {
-                showProductDetail(product);
-            });
-
-            productsGrid.appendChild(productCard);
-        });
-    }
-
-    // Show solution detail modal
-    function showSolutionDetail(solution) {
-        // Populate modal
-        document.getElementById('solutionImage').src = solution.image;
-        document.getElementById('solutionImage').alt = solution.title;
-        document.getElementById('solutionTitle').textContent = solution.title;
-        document.getElementById('solutionCategory').textContent = solution.category;
-        document.getElementById('solutionDescription').textContent = solution.description;
-
-        // Populate benefits
-        const benefitsList = document.getElementById('solutionBenefits');
-        benefitsList.innerHTML = '';
-        solution.benefits.forEach(benefit => {
-            const li = document.createElement('li');
-            li.textContent = benefit;
-            benefitsList.appendChild(li);
-        });
-
-        // Populate applications
-        const applicationsList = document.getElementById('solutionApplications');
-        applicationsList.innerHTML = '';
-        solution.applications.forEach(application => {
-            const li = document.createElement('li');
-            li.textContent = application;
-            applicationsList.appendChild(li);
-        });
-
-        // Load recommended products
-        const solutionProductsGrid = document.getElementById('solutionProductsGrid');
-        solutionProductsGrid.innerHTML = '';
-
-        solution.products.forEach(productId => {
-            const product = currentPartner.products[productId];
-            if (product) {
-                const productCard = document.createElement('div');
-                productCard.className = 'solution-product-card';
-
-                productCard.innerHTML = `
-                    <h5>${product.title}</h5>
-                    <p>${product.category}</p>
-                    <a href="#" class="view-product-btn" data-product-id="${productId}">View Product Details</a>
+                    <div class="solution-card-content">
+                        <h3>${solution.title}</h3>
+                        <p>${solution.description.substring(0, 120)}...</p>
+                        <div class="solution-card-actions">
+                            <button class="solution-details-btn">View Solution</button>
+                        </div>
+                    </div>
                 `;
 
-                productCard.querySelector('.view-product-btn').addEventListener('click', (e) => {
-                    e.preventDefault();
+                solutionCard.querySelector('.solution-details-btn').addEventListener('click', () => {
+                    showSolutionDetail(solution);
+                });
+
+                solutionsGrid.appendChild(solutionCard);
+            });
+        }
+
+        // Load products into grid
+        function loadProducts(products) {
+            productsGrid.innerHTML = '';
+
+            if (Object.keys(products).length === 0) {
+                productsGrid.innerHTML = `
+                    <div class="coming-soon-message">
+                        <i class="fas fa-box-open"></i>
+                        <h3>Products Coming Soon</h3>
+                        <p>We're currently compiling the product catalog for this partner. Please check back soon or explore our solution offerings.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            let filteredProducts = Object.entries(products);
+
+            // Filter by category if not "All Products"
+            if (currentCategory !== 'All Products') {
+                filteredProducts = filteredProducts.filter(([id, product]) => product.category === currentCategory);
+            }
+
+            if (filteredProducts.length === 0) {
+                productsGrid.innerHTML = `
+                    <div class="no-products-message">
+                        <i class="fas fa-info-circle"></i>
+                        <h3>No Products in This Category</h3>
+                        <p>There are currently no products available in the selected category. Please try another category or check back later.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            filteredProducts.forEach(([id, product]) => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.dataset.id = id;
+
+                productCard.innerHTML = `
+                    <div class="product-card-image">
+                        <img src="${product.image}" alt="${product.title}" loading="lazy">
+                    </div>
+                    <div class="product-card-content">
+                        <h3>${product.title}</h3>
+                        <p class="product-category" title="${product.category}">${product.category}</p>
+                        <p class="product-description">${product.description.substring(0, 100)}...</p>
+                        <div class="product-card-actions">
+                            <button class="product-details-btn">View Details</button>
+                        </div>
+                    </div>
+                `;
+
+                productCard.querySelector('.product-details-btn').addEventListener('click', () => {
                     showProductDetail(product);
                 });
 
-                solutionProductsGrid.appendChild(productCard);
+                productsGrid.appendChild(productCard);
+            });
+        }
+
+        // Show solution detail modal
+        function showSolutionDetail(solution) {
+            // Populate modal
+            document.getElementById('solutionImage').src = solution.image;
+            document.getElementById('solutionImage').alt = solution.title;
+            document.getElementById('solutionTitle').textContent = solution.title;
+            document.getElementById('solutionCategory').textContent = solution.category;
+            document.getElementById('solutionDescription').textContent = solution.description;
+
+            // Populate benefits
+            const benefitsList = document.getElementById('solutionBenefits');
+            benefitsList.innerHTML = '';
+            solution.benefits.forEach(benefit => {
+                const li = document.createElement('li');
+                li.textContent = benefit;
+                benefitsList.appendChild(li);
+            });
+
+            // Populate applications
+            const applicationsList = document.getElementById('solutionApplications');
+            applicationsList.innerHTML = '';
+            solution.applications.forEach(application => {
+                const li = document.createElement('li');
+                li.textContent = application;
+                applicationsList.appendChild(li);
+            });
+
+            // Load recommended products
+            const solutionProductsGrid = document.getElementById('solutionProductsGrid');
+            solutionProductsGrid.innerHTML = '';
+
+            solution.products.forEach(productId => {
+                const product = currentPartner.products[productId];
+                if (product) {
+                    const productCard = document.createElement('div');
+                    productCard.className = 'solution-product-card';
+
+                    productCard.innerHTML = `
+                        <h5>${product.title}</h5>
+                        <p>${product.category}</p>
+                        <a href="#" class="view-product-btn" data-product-id="${productId}">View Product Details</a>
+                    `;
+
+                    productCard.querySelector('.view-product-btn').addEventListener('click', (e) => {
+                        e.preventDefault();
+                        showProductDetail(product);
+                    });
+
+                    solutionProductsGrid.appendChild(productCard);
+                }
+            });
+
+            // Close solutions modal and open solution modal
+            solutionsModal.classList.remove('show');
+            solutionModal.classList.add('show');
+        }
+
+        // Show product detail modal
+        function showProductDetail(product) {
+            // Populate modal
+            document.getElementById('productImage').src = product.image;
+            document.getElementById('productImage').alt = product.title;
+            document.getElementById('productTitle').textContent = product.title;
+            document.getElementById('productCategory').textContent = product.category;
+            document.getElementById('productDescription').textContent = product.description;
+            document.getElementById('productApplications').textContent = product.applications;
+            document.getElementById('productFeatures').textContent = product.features;
+            document.getElementById('productSize').textContent = product.size;
+            document.getElementById('productCoverage').textContent = product.coverage;
+
+            // Populate benefits
+            const benefitsList = document.getElementById('productBenefits');
+            benefitsList.innerHTML = '';
+            product.benefits.forEach(benefit => {
+                const li = document.createElement('li');
+                li.textContent = benefit;
+                benefitsList.appendChild(li);
+            });
+
+            // Populate technical features
+            const techFeaturesList = document.getElementById('productTechFeatures');
+            techFeaturesList.innerHTML = '';
+            product.techFeatures.forEach(feature => {
+                const li = document.createElement('li');
+                li.textContent = feature;
+                techFeaturesList.appendChild(li);
+            });
+
+            // Populate application steps
+            const applicationStepsList = document.getElementById('productApplicationSteps');
+            applicationStepsList.innerHTML = '';
+            product.applicationSteps.forEach(step => {
+                const li = document.createElement('li');
+                li.textContent = step;
+                applicationStepsList.appendChild(li);
+            });
+
+            // Set PDF download links if they exist
+            if (product.techSheet) {
+                document.getElementById('productTechSheetBtn').href = product.techSheet;
+                document.getElementById('productTechSheetBtn').download = product.title.replace(/\s+/g, '_') + '_Technical_Sheet.pdf';
+                document.getElementById('productTechSheetBtn').style.display = 'flex';
+            } else {
+                document.getElementById('productTechSheetBtn').style.display = 'none';
+            }
+
+            if (product.safetySheet) {
+                document.getElementById('productSafetySheetBtn').href = product.safetySheet;
+                document.getElementById('productSafetySheetBtn').download = product.title.replace(/\s+/g, '_') + '_Safety_Data.pdf';
+                document.getElementById('productSafetySheetBtn').style.display = 'flex';
+            } else {
+                document.getElementById('productSafetySheetBtn').style.display = 'none';
+            }
+
+            // Close current modal and open product modal
+            if (solutionsModal.classList.contains('show')) {
+                solutionsModal.classList.remove('show');
+            }
+            if (solutionModal.classList.contains('show')) {
+                solutionModal.classList.remove('show');
+            }
+            productModal.classList.add('show');
+        }
+
+        // Close modals
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                solutionsModal.classList.remove('show');
+                solutionModal.classList.remove('show');
+                productModal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === solutionsModal || e.target === solutionModal || e.target === productModal) {
+                solutionsModal.classList.remove('show');
+                solutionModal.classList.remove('show');
+                productModal.classList.remove('show');
+                document.body.style.overflow = 'auto';
             }
         });
 
-        // Close solutions modal and open solution modal
-        solutionsModal.classList.remove('show');
-        solutionModal.classList.add('show');
-    }
-
-    // Show product detail modal
-    function showProductDetail(product) {
-        // Populate modal
-        document.getElementById('productImage').src = product.image;
-        document.getElementById('productImage').alt = product.title;
-        document.getElementById('productTitle').textContent = product.title;
-        document.getElementById('productCategory').textContent = product.category;
-        document.getElementById('productDescription').textContent = product.description;
-        document.getElementById('productApplications').textContent = product.applications;
-        document.getElementById('productFeatures').textContent = product.features;
-        document.getElementById('productSize').textContent = product.size;
-        document.getElementById('productCoverage').textContent = product.coverage;
-
-        // Populate benefits
-        const benefitsList = document.getElementById('productBenefits');
-        benefitsList.innerHTML = '';
-        product.benefits.forEach(benefit => {
-            const li = document.createElement('li');
-            li.textContent = benefit;
-            benefitsList.appendChild(li);
-        });
-
-        // Populate technical features
-        const techFeaturesList = document.getElementById('productTechFeatures');
-        techFeaturesList.innerHTML = '';
-        product.techFeatures.forEach(feature => {
-            const li = document.createElement('li');
-            li.textContent = feature;
-            techFeaturesList.appendChild(li);
-        });
-
-        // Populate application steps
-        const applicationStepsList = document.getElementById('productApplicationSteps');
-        applicationStepsList.innerHTML = '';
-        product.applicationSteps.forEach(step => {
-            const li = document.createElement('li');
-            li.textContent = step;
-            applicationStepsList.appendChild(li);
-        });
-
-        // Set PDF download links if they exist
-        if (product.techSheet) {
-            document.getElementById('productTechSheetBtn').href = product.techSheet;
-            document.getElementById('productTechSheetBtn').download = product.title.replace(/\s+/g, '_') + '_Technical_Sheet.pdf';
-            document.getElementById('productTechSheetBtn').style.display = 'flex';
-        } else {
-            document.getElementById('productTechSheetBtn').style.display = 'none';
+        // Handle URL parameters for direct linking
+        function getUrlParameter(name) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+            const results = regex.exec(window.location.href);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
 
-        if (product.safetySheet) {
-            document.getElementById('productSafetySheetBtn').href = product.safetySheet;
-            document.getElementById('productSafetySheetBtn').download = product.title.replace(/\s+/g, '_') + '_Safety_Data.pdf';
-            document.getElementById('productSafetySheetBtn').style.display = 'flex';
-        } else {
-            document.getElementById('productSafetySheetBtn').style.display = 'none';
-        }
+        const partnerParam = getUrlParameter('partner');
 
-        // Close current modal and open product modal
-        if (solutionsModal.classList.contains('show')) {
-            solutionsModal.classList.remove('show');
-        }
-        if (solutionModal.classList.contains('show')) {
-            solutionModal.classList.remove('show');
-        }
-        productModal.classList.add('show');
-    }
+        if (partnerParam && partnersData[partnerParam]) {
+            setTimeout(() => {
+                const exploreButton = document.querySelector(`.explore-btn[data-partner="${partnerParam}"]`);
+                if (exploreButton) {
+                    exploreButton.click();
 
-    // Close modals
-    closeButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            solutionsModal.classList.remove('show');
-            solutionModal.classList.remove('show');
-            productModal.classList.remove('show');
-            document.body.style.overflow = 'auto';
-        });
-    });
-
-    // Close modal when clicking outside
-    window.addEventListener('click', (e) => {
-        if (e.target === solutionsModal || e.target === solutionModal || e.target === productModal) {
-            solutionsModal.classList.remove('show');
-            solutionModal.classList.remove('show');
-            productModal.classList.remove('show');
-            document.body.style.overflow = 'auto';
+                    // Scroll to section
+                    document.getElementById('partners').scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            }, 500);
         }
     });
-
-    // Handle URL parameters for direct linking
-    function getUrlParameter(name) {
-        name = name.replace(/[\[\]]/g, '\\$&');
-        const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
-        const results = regex.exec(window.location.href);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, ' '));
-    }
-
-    const partnerParam = getUrlParameter('partner');
-
-    if (partnerParam && partnersData[partnerParam]) {
-        setTimeout(() => {
-            const exploreButton = document.querySelector(`.explore-btn[data-partner="${partnerParam}"]`);
-            if (exploreButton) {
-                exploreButton.click();
-
-                // Scroll to section
-                document.getElementById('partners').scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        }, 500);
-    }
-});
