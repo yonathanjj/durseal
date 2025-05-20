@@ -31,43 +31,43 @@ document.addEventListener("DOMContentLoaded", function() {
 // Solutions products data with added PDF links
 const solutionsProducts = {
     'dr-fixit-waterproof-plus': {
-        title: 'Dr. Fixit',
-        category: 'Waterproofing',
-        image: 'assets/img/PowderWaterproof.png',
-        description: 'Integral Powder Waterproofing Compound for Plaster & Concrete.',
-        applications: 'Roofs, walls, basements',
-        features: 'Flexible, crack-bridging, UV resistant',
-        size: '500g',
-        coverage: '500 gm of Dr. Fixit Powder Waterproof for 50 kg bag of cement',
-        benefits: [
-                                'Chloride-free hence no chances of corrosion of reinforcement bars.',
-                                'As an effective pore filler, helps to fill capillaries and pores to prevent water seepage.',
-                                'Makes the mix cohesive and denser, hence the concrete & plaster has reduced permeability.'
-                            ],
-                            techFeatures: [
-                                'Polymer content: 65%',
-                                'Elongation: 300%',
-                                'Tensile strength: 2.5 N/mm²'
-                            ],
-                            applicationSteps: [
-                                'Clean surface',
-                                'Apply primer',
-                                'First coat application'
-                            ],
+                        title: 'Dr. Fixit Powder Waterproof',
+                        category: 'Integral Waterproofing',
+                        image: 'assets/img/PowderWaterproof.png',
+                        description: 'Integral Powder Waterproofing Compound for Plaster & Concrete',
+                        applications: 'Roofs, walls, basements',
+                        features: 'Flexible, crack-bridging, UV resistant',
+                        size: '500g',
+                        coverage: '500 gm of Dr. Fixit Powder Waterproof for 50 kg bag of cement',
+                        benefits: [
+                            'Chloride-free hence no chances of corrosion of reinforcement bars.',
+                            'As an effective pore filler, helps to fill capillaries and pores to prevent water seepage.',
+                            'Makes the mix cohesive and denser, hence the concrete & plaster has reduced permeability.'
+                        ],
+                        techFeatures: [
+                            'Polymer content: 65%',
+                            'Elongation: 300%',
+                            'Tensile strength: 2.5 N/mm²'
+                        ],
+                        applicationSteps: [
+                            'Clean surface',
+                            'Apply primer',
+                            'First coat application'
+                        ],
         techSheet: 'assets/pdf/PowderWaterproof1.pdf',
         safetySheet: 'assets/pdf/PowderWaterproof2.pdf',
         contactLink: 'contact.html'
     },
     // PRODUCT 2
-                    'dr-fixit-concrete-repair': {
+    'dr-fixit-concrete-repair': {
                         title: 'Dr. Fixit Polyplus CP Admix',
-                        category: 'Waterproofing',
+                        category: 'Integral Waterproofing',
                         image: 'assets/img/PolyplusCP.png',
                         description: 'New generation integral crystalline waterproofing admixture',
                         applications: 'Columns, beams, slabs',
                         features: 'Fast-setting, high-strength',
-                        size: '10kg, 25kg',
-                        coverage: '2.0 sqm/kg',
+                        size: '30kg',
+                        coverage: '0.8% - 1% by weight of cement.',
                         benefits: [
                             'Resists extremely high hydrostatic pressure up to 153 meter / 15 Bar.',
                             'Can self-heal crack up to 0.5mm in presence of moisture.',
@@ -89,31 +89,31 @@ const solutionsProducts = {
             contactLink: '/contact?product=Dr.%20Fixit%20Raincoat%202%20in%201'
         },
         // PRODUCT 3
-                        'dr-fixit-tile-grout': {
-                            title: 'Dr. Fixit Pidiproof LW+',
-                            category: 'Waterproofing',
-                            image: 'assets/img/PidiproofLW+.png',
-                            description: 'Integral liquid waterproofing compound for concrete & plaster to reduce dampness.',
-                            applications: 'Floor tiles, wall tiles',
-                            features: 'Colorfast, mold resistant',
-                            size: '2kg, 5kg, 10kg',
-                            coverage: '5 sqm/kg',
-                            benefits: [
-                                'Reduces dampness by improving waterproofing of concrete/ plaster.',
-                                'Resists corrosion of steel.',
-                                'No separation cracks in brick mortar.'
-                            ],
-                            techFeatures: [
-                                'Shrinkage: <0.1%',
-                                'Water absorption: <5%',
-                                'Abrasion resistance: >500 cycles'
-                            ],
-                            applicationSteps: [
-                                'Prepare joints',
-                                'Mix powder',
-                                'Apply grout',
-                                'Clean excess'
-                            ],
+       'dr-fixit-tile-grout': {
+                           title: 'Dr. Fixit Pidiproof LW+',
+                           category: 'Integral Waterproofing',
+                           image: 'assets/img/PidiproofLW+.png',
+                           description: 'Integral liquid waterproofing compound for concrete & plaster to reduce dampness.',
+                           applications: 'Floor tiles, wall tiles',
+                           features: 'Colorfast, mold resistant',
+                           size: ' 200ml , 5L, 1L and 200 mL',
+                           coverage: '5 sqm/kg',
+                           benefits: [
+                               'Reduces dampness by improving waterproofing of concrete/ plaster.',
+                               'Resists corrosion of steel.',
+                               'No separation cracks in brick mortar.'
+                           ],
+                           techFeatures: [
+                               'Shrinkage: <0.1%',
+                               'Water absorption: <5%',
+                               'Abrasion resistance: >500 cycles'
+                           ],
+                           applicationSteps: [
+                               'Prepare joints',
+                               'Mix powder',
+                               'Apply grout',
+                               'Clean excess'
+                           ],
                 techSheet: 'assets/pdf/PidiproofLW+1.pdf',
                 safetySheet: 'assets/pdf/PidiproofLW+2.pdf',
                 contactLink: 'contact.html'
@@ -121,7 +121,7 @@ const solutionsProducts = {
             // PRODUCT 4
             'Dr. Fixit Polyplus CP': {
                                 title: 'Dr. Fixit Polyplus CP',
-                                category: 'Primer',
+                                category: 'Crystalline Coating',
                                 image: 'assets/img/CrystallinePolyplus.png',
                                 description: 'Cementitious crystalline waterproof coating for concrete.',
                                 applications: 'Concrete, plaster, masonry',
@@ -134,7 +134,7 @@ const solutionsProducts = {
                                     'Treated concrete withstands hydrostatic water pressure up to 15 metre head.'
                                 ],
                                 techFeatures: [
-                                    'Solids content: 12%',
+                                    'Solid content: 12%',
                                     'PH: 8.5',
                                     'Density: 1.05 g/cm³'
                                 ],
