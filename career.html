@@ -48,81 +48,10 @@
   <section class="careers-job-listings" id="positions">
     <div class="careers-container">
       <h2 class="careers-section-title">Current Opportunities</h2>
-      <p class="careers-section-subtitle">Find the perfect role for your skills and ambitions</p>
-
-      <div class="careers-filters">
-        <div class="careers-filter-group">
-          <h4>Filter by:</h4>
-          <div class="careers-filter-options">
-            <button class="careers-filter-btn active" data-filter="all">All</button>
-            <button class="careers-filter-btn" data-filter="full-time">Full-Time</button>
-            <button class="careers-filter-btn" data-filter="part-time">Part-Time</button>
-            <button class="careers-filter-btn" data-filter="remote">Remote</button>
-            <button class="careers-filter-btn" data-filter="hybrid">Hybrid</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="careers-jobs-grid">
-        <!-- Job Card 1 -->
-        <div class="careers-job-card" data-type="full-time hybrid">
-          <div class="job-card-header">
-            <span class="job-badge full-time">Full-Time</span>
-            <span class="job-badge hybrid">Hybrid</span>
-          </div>
-          <h3 class="careers-job-title">Sales Executive</h3>
-          <div class="job-meta">
-            <span><i class="fas fa-map-marker-alt"></i> New York, NY</span>
-            <span><i class="fas fa-briefcase"></i> Business Development</span>
-          </div>
-          <p class="job-description">Drive revenue growth by developing new client relationships and managing key accounts in the tech sector.</p>
-          <div class="job-card-footer">
-            <a href="#apply" class="careers-apply-button">Apply Now <i class="fas fa-arrow-right"></i></a>
-            <span class="job-posted">Posted 2 days ago</span>
-          </div>
-        </div>
-
-        <!-- Job Card 2 -->
-        <div class="careers-job-card" data-type="remote full-time">
-          <div class="job-card-header">
-            <span class="job-badge remote">Remote</span>
-            <span class="job-badge full-time">Full-Time</span>
-          </div>
-          <h3 class="careers-job-title">Senior Software Engineer</h3>
-          <div class="job-meta">
-            <span><i class="fas fa-map-marker-alt"></i> Remote</span>
-            <span><i class="fas fa-briefcase"></i> Engineering</span>
-          </div>
-          <p class="job-description">Design and implement scalable solutions for our cloud-based platform using modern JavaScript frameworks.</p>
-          <div class="job-card-footer">
-            <a href="#apply" class="careers-apply-button">Apply Now <i class="fas fa-arrow-right"></i></a>
-            <span class="job-posted">Posted 1 week ago</span>
-          </div>
-        </div>
-
-        <!-- Job Card 3 -->
-        <div class="careers-job-card" data-type="part-time">
-          <div class="job-card-header">
-            <span class="job-badge part-time">Part-Time</span>
-          </div>
-          <h3 class="careers-job-title">Marketing Intern</h3>
-          <div class="job-meta">
-            <span><i class="fas fa-map-marker-alt"></i> San Francisco, CA</span>
-            <span><i class="fas fa-briefcase"></i> Marketing</span>
-          </div>
-          <p class="job-description">Support our marketing team with content creation, social media management, and campaign analysis.</p>
-          <div class="job-card-footer">
-            <a href="#apply" class="careers-apply-button">Apply Now <i class="fas fa-arrow-right"></i></a>
-            <span class="job-posted">Posted 3 days ago</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="careers-no-jobs">
-        <p>Don't see your perfect role? <a href="#contact">Send us your resume</a> anyway!</p>
-      </div>
+      <p class="careers-section-subtitle">We don't have any openings for now, feel free to send us your CV using the form below, we will get back to you if we have openings in the future. Thank you.</p>
     </div>
   </section>
+
 
   <!-- Why Join Us Section -->
   <section class="careers-why-join-us" id="why-join">
@@ -174,11 +103,11 @@
   <section class="careers-application-form" id="apply">
     <div class="careers-container">
       <div class="form-header">
-        <h2 class="careers-section-title">Ready to Apply?</h2>
-        <p class="careers-section-subtitle">Start your journey with us today</p>
+        <h2 class="careers-section-title">Submit Your CV</h2>
+        <p class="careers-section-subtitle">We'll keep your information on file for future opportunities</p>
       </div>
 
-      <form class="careers-form">
+      <form class="careers-form" action="https://formspree.io/f/xyzwdelo" method="POST" enctype="multipart/form-data">
         <div class="form-columns">
           <div class="form-col">
             <div class="careers-form-group">
@@ -197,12 +126,13 @@
 
           <div class="form-col">
             <div class="careers-form-group">
-              <label for="position" class="careers-form-label">Position Applying For*</label>
+              <label for="position" class="careers-form-label">Position Interest*</label>
               <select id="position" name="position" class="careers-form-input" required>
-                <option value="">Select a position</option>
-                <option value="sales-executive">Sales Executive</option>
-                <option value="software-engineer">Software Engineer</option>
-                <option value="marketing-intern">Marketing Intern</option>
+                <option value="">Select an area</option>
+                <option value="business-development">Business Development</option>
+                <option value="software-engineering">Software Engineering</option>
+                <option value="marketing">Marketing</option>
+                <option value="operations">Operations</option>
                 <option value="other">Other</option>
               </select>
             </div>
@@ -215,22 +145,22 @@
               </div>
             </div>
             <div class="careers-form-group">
-              <label for="linkedin" class="careers-form-label">LinkedIn Profile</label>
+              <label for="linkedin" class="careers-form-label">LinkedIn Profile (Optional)</label>
               <input type="url" id="linkedin" name="linkedin" class="careers-form-input" placeholder="https://linkedin.com/in/yourprofile">
             </div>
           </div>
         </div>
 
         <div class="careers-form-group full-width">
-          <label for="message" class="careers-form-label">Cover Letter</label>
-          <textarea id="message" name="message" class="careers-form-textarea" rows="6" placeholder="Tell us why you'd be a great fit..."></textarea>
+          <label for="message" class="careers-form-label">Additional Information (Optional)</label>
+          <textarea id="message" name="message" class="careers-form-textarea" rows="6" placeholder="Tell us about your skills and experience..."></textarea>
         </div>
 
         <div class="form-footer">
           <button type="submit" class="careers-submit-button">
-            Submit Application <i class="fas fa-paper-plane"></i>
+            Submit CV <i class="fas fa-paper-plane"></i>
           </button>
-          <p class="form-disclaimer">We'll get back to you within 5 business days</p>
+          <p class="form-disclaimer">We'll review your information and contact you if we have matching opportunities</p>
         </div>
       </form>
     </div>

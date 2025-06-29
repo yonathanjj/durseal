@@ -149,7 +149,6 @@ const solutionsProducts = {
                             contactLink: 'contact.html'
                         }
 
-    // ... (other products with same structure)
 };
 
 // DOM Elements
@@ -476,32 +475,6 @@ window.onclick = function(event) {
     }
 }
 
-// Update project card click handlers
-document.addEventListener("DOMContentLoaded", function() {
-    // Add click handlers to all project explore buttons
-    document.querySelectorAll('.project-card .explore-btn').forEach((btn, index) => {
-        btn.onclick = function(e) {
-            e.preventDefault();
-            openProjectModal('project' + (index + 1));
-        };
-    });
-
-    // Add click handlers to all blog read more buttons
-    document.querySelectorAll('.blog-card .read-more').forEach((btn, index) => {
-        btn.onclick = function(e) {
-            e.preventDefault();
-            openBlogModal('blog' + (index + 1));
-        };
-    });
-
-    // Add close button handlers
-    document.querySelectorAll('.close-modal').forEach(btn => {
-        btn.onclick = closeModal;
-    });
-
-    // Rest of your existing DOMContentLoaded code...
-    // (Keep all your existing slider, filtering, and animation code here)
-});
 
 // Keyboard accessibility for modals
 document.addEventListener('keydown', function(event) {

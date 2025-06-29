@@ -63,10 +63,14 @@
             <input type="text" id="lastName" name="lastName">
         </div>
 
-        <!-- Email -->
+        <!-- Contact Info -->
         <div class="form-group">
             <label for="email">Email*</label>
             <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number*</label>
+            <input type="tel" id="phone" name="phone" required>
         </div>
 
         <!-- Company Details -->
@@ -75,27 +79,136 @@
             <input type="text" id="company" name="company" required>
         </div>
 
-        <!-- Solution Interest -->
+        <!-- Inquiry Type -->
         <div class="form-group">
-            <label for="solution">What solution are you interested in?</label>
-            <select id="solution" name="solution" required>
-                <option value="">Please select one of the following:</option>
-                <option value="solution1">Solution 1</option>
-                <option value="solution2">Solution 2</option>
-                <option value="solution3">Solution 3</option>
+            <label for="inquiryType">Type of Inquiry*</label>
+            <select id="inquiryType" name="inquiryType" required>
+                <option value="">Select inquiry type</option>
+                <option value="quotation">Get Quotation</option>
+                <option value="visit">Schedule a Visit to Office</option>
+                <option value="complaint">Complaint</option>
+                <option value="availability">Product Availability</option>
+                <option value="technical">Technical Support</option>
+                <option value="other">Other</option>
             </select>
         </div>
 
-        <!-- Message -->
+        <!-- Product Category -->
         <div class="form-group">
-            <label for="message">Please provide all pertinent details about your enquiry:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <label for="productCategory">Product Category*</label>
+            <select id="productCategory" name="productCategory" required>
+                <option value="">Select product category</option>
+                <option value="integral-waterproofing">Integral Waterproofing</option>
+                <option value="crystalline-coating">Crystalline Coating</option>
+                <option value="top-coat">Top Coat</option>
+                <option value="under-coat">Two-Component Under Coat</option>
+                <option value="membrane">APP/Bituminous Membrane</option>
+                <option value="sealants">Sealants</option>
+                <option value="latex">Latex</option>
+                <option value="floor-hardener">Floor Hardener</option>
+                <option value="tile-fixing">Tile Fixing</option>
+                <option value="construction-foam">Construction Foam</option>
+            </select>
+        </div>
+
+        <!-- Specific Product -->
+        <div class="form-group">
+            <label for="specificProduct">Specific Product (if known)</label>
+            <select id="specificProduct" name="specificProduct">
+                <option value="">Select specific product</option>
+                <!-- Integral Waterproofing -->
+                <optgroup label="Integral Waterproofing">
+                    <option value="dr-fixit-waterproof-plus">Dr. Fixit Powder Waterproof</option>
+                    <option value="dr-fixit-concrete-repair">Dr. Fixit Polyplus CP Admix</option>
+                    <option value="dr-fixit-tile-grout">Dr. Fixit Pidiproof LW+</option>
+                    <option value="dr-fixit-fastflex">Dr. Fixit Fastflex</option>
+                </optgroup>
+                <!-- Crystalline Coating -->
+                <optgroup label="Crystalline Coating">
+                    <option value="dr-fixit-polyplus-cp">Dr. Fixit Polyplus CP</option>
+                </optgroup>
+                <!-- Top Coat -->
+                <optgroup label="Top Coat">
+                    <option value="dr-fixit-raincoat-2in1">Dr. Fixit Raincoat 2 in 1</option>
+                </optgroup>
+                <!-- Two-Component Under Coat -->
+                <optgroup label="Two-Component Under Coat">
+                    <option value="dr-fixit-pidifin-2k">Dr. Fixit Pidifin 2K</option>
+                </optgroup>
+                <!-- APP/Bituminous Membrane -->
+                <optgroup label="APP/Bituminous Membrane">
+                    <option value="dr-fixit-torchshield">Dr. Fixit Torchshield/Insutech/Ecobit</option>
+                </optgroup>
+                <!-- Sealants -->
+                <optgroup label="Sealants">
+                    <option value="dr-fixit-pu-sealant">Dr. Fixit PU Sealant</option>
+                </optgroup>
+                <!-- Latex -->
+                <optgroup label="Latex">
+                    <option value="dr-fixit-super-latex">Dr. Fixit Super Latex</option>
+                </optgroup>
+                <!-- Floor Hardener -->
+                <optgroup label="Floor Hardener">
+                    <option value="dr-fixit-piditop-333">Dr. Fixit Piditop 333</option>
+                </optgroup>
+                <!-- Tile Fixing -->
+                <optgroup label="Tile Fixing">
+                    <option value="dr-fixit-tile-grout">Dr. Fixit Tile grout</option>
+                    <option value="dr-fixit-modern-tile-adhesive">Dr. Fixit Modern Tile Adhesive</option>
+                    <option value="dr-fixit-marble-tile-adhesive">Dr. Fixit Marble Tile Adhesive</option>
+                    <option value="dr-fixit-stone-tile-adhesive">Dr. Fixit Stone Tile Adhesive</option>
+                    <option value="dr-fixit-modern-tile-adhesive-plus">Dr. Fixit Modern Tile Adhesive Plus</option>
+                </optgroup>
+                <!-- Construction Foam -->
+                <optgroup label="Construction Foam">
+                    <option value="uspro-construction-foam">USPRO construction Foam</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <!-- Project Details -->
+        <div class="form-group">
+            <label for="projectDetails">Project Details*</label>
+            <textarea id="projectDetails" name="projectDetails" rows="5" required placeholder="Please describe your project including size, location, and any specific requirements"></textarea>
+        </div>
+
+        <!-- Preferred Contact Method -->
+        <div class="form-group">
+            <label>Preferred Contact Method*</label>
+            <div class="radio-group">
+                <label class="radio-option">
+                    <input type="radio" name="contactMethod" value="email" checked>
+                    <span class="radio-custom"></span>
+                    Email
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="contactMethod" value="phone">
+                    <span class="radio-custom"></span>
+                    Phone
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="contactMethod" value="whatsapp">
+                    <span class="radio-custom"></span>
+                    WhatsApp
+                </label>
+            </div>
+        </div>
+
+        <!-- Preferred Contact Time -->
+        <div class="form-group">
+            <label for="contactTime">Preferred Contact Time</label>
+            <select id="contactTime" name="contactTime">
+                <option value="">Any time</option>
+                <option value="morning">Morning (8am-12pm)</option>
+                <option value="afternoon">Afternoon (12pm-5pm)</option>
+                <option value="evening">Evening (5pm-8pm)</option>
+            </select>
         </div>
 
         <!-- Consent -->
         <div class="form-group consent">
             <input type="checkbox" id="consent" name="consent" required>
-            <label for="consent">You accept the Terms & Conditions by submitting your request.</label>
+            <label for="consent">You accept the Terms & Conditions by submitting your request.*</label>
         </div>
         <div class="form-group consent">
             <input type="checkbox" id="updates" name="updates">
@@ -103,7 +216,7 @@
         </div>
 
         <!-- Submit Button -->
-        <button type="submit">Submit <i class="fas fa-paper-plane"></i></button>
+        <button type="submit">Submit Request <i class="fas fa-paper-plane"></i></button>
     </form>
 
     <!-- Locations Section -->
@@ -111,12 +224,11 @@
         <h2><i class="fas fa-map-marked-alt"></i> Showrooms</h2>
         <div class="locations-grid">
             <div class="location-card" onclick="window.open('https://maps.app.goo.gl/cqdX4FyvfmZBy2Q68', '_blank')">
-                <h3>Gisozi Showroom</h3>
-                <p>KG 33 ST. Gisozi, Kigali, Rwanda</p>
+                <h3>Head Office</h3>
+                <p>KN 3 Rd, Sonatube, Kigali, Rwanda</p>
                 <div class="map-preview">
                     <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.6811105460516!2d30.058585075002!3d-1.9273631980394166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca6fdad0bd1f1%3A0x24db9a41050207e1!2sKG%2033%20St%2C%20Kigali%2C%20Rwanda!5e0!3m2!1sen!2srw!4v1719840018237!5m2!1sen!2srw"
-                            width="100%"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.497717887591!2d30.0934666!3d-1.9509974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca6e5a5a5a5a5%3A0x1a1a1a1a1a1a1a1a!2sKN%203%20Rd%2C%20Sonatube%2C%20Kigali%2C%20Rwanda!5e0!3m2!1sen!2srw!4v1719840018237!5m2!1sen!2srw"                            width="100%"
                             height="200"
                             style="border:0;"
                             allowfullscreen=""
@@ -128,12 +240,11 @@
             </div>
 
             <div class="location-card" onclick="window.open('https://maps.app.goo.gl/eW9gA5o3scHi6hr77', '_blank')">
-                <h3>Gisozi Showroom</h3>
-                <p>KG 33 ST. Gisozi, Kigali, Rwanda</p>
+                <h3>Showroom</h3>
+                <p>KG 33 Ave, Gisozi, Kigali, Rwanda</p>
                 <div class="map-preview">
                     <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.9874094494513!2d-3.2024262!3d55.9611598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887c6a23c50c24b%3A0xf5e5d0b123f3d8a9!2s4%20W%20Silvermills%20Ln%2C%20Edinburgh%20EH3%205BD%2C%20UK!5e0!3m2!1sen!2suk!4v1719840124725!5m2!1sen!2suk"
-                            width="100%"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.490010910727!2d30.0608148!3d-1.9515516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca76b0f1a0c99%3A0x9aae5e5a5a5a5a5a!2sKG%2033%20Ave%2C%20Gisozi%2C%20Kigali%2C%20Rwanda!5e0!3m2!1sen!2suk!4v1719840124725!5m2!1sen!2suk"                            width="100%"
                             height="200"
                             style="border:0;"
                             allowfullscreen=""
@@ -143,10 +254,7 @@
                 </div>
                 <p class="map-link"><i class="fas fa-map-marker-alt"></i> View on map</p>
             </div>
-
-
         </div>
-
     </div>
 </main>
 
